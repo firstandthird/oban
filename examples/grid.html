@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="../dist/baseline.css"/>
+    <style>
+      div[class^=column] { 
+        background: #ddd;
+        border: 1px solid #ccc;
+      }
+      div[class^=column] > div {
+        background: #f0f0f0;
+      }
+      .wrapper {
+        width: 800px;
+        margin: 0 auto;
+        background: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="grid12">
+        <div class="column1">1</div>
+        <div class="column1">2</div>
+        <div class="column1">3</div>
+        <div class="column1">4</div>
+        <div class="column1">5</div>
+        <div class="column1">6</div>
+        <div class="column1">7</div>
+        <div class="column1">8</div>
+        <div class="column1">9</div>
+        <div class="column1">10</div>
+        <div class="column1">11</div>
+        <div class="column1">12</div>
+      </div>
+      <div class="grid12">
+        <div class="column2">2 Columns</div>
+        <div class="column10">
+          10 Columns
+          <div class="grid12">
+            <div class="column6">6 Columns</div>
+            <div class="column6">6 Columns</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+.bl-typography(@family: 'Helvetica', @bodySize: 16px, @lineHeight: 24px) {
+  @scale: 1.618;
+
+  .font-size(@factor: 1) {
+    font-size: round(@bodySize * (`Math.pow("@{scale}", "@{factor}")`));
+  }
+
+  .lines(@count: 1) {
+    line-height: (@lineHeight * @count);
+  }
+  h1,h2,h3,h4,p {
+    margin: 0;
+  }
+
+  h1 {
+    .font-size(3);
+    .lines(4);
+  }
+  h2 {
+    .font-size(2);
+    .lines(2);
+  }
+  h3 {
+    .font-size(1);
+  }
+  h4 {
+    .font-size(.5);
+  }
+
+  body {
+    font-size: (@bodySize);
+    font-family: @family;
+    line-height: (@lineHeight);
+  }
+
+  p {
+    margin-bottom: (@lineHeight);
+  }
+}
