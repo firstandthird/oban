@@ -356,12 +356,9 @@ p {
   margin-bottom: 24px;
 }
 .grid12 {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-.grid12:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 .grid12:after {
   content: "";
@@ -370,6 +367,8 @@ p {
 }
 .grid12 [class*=column] {
   float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 10px;
 }
@@ -454,16 +453,6 @@ p {
 .grid-pad {
   padding: 10px;
 }
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 .pull-left {
   float: left;
 }
@@ -472,6 +461,11 @@ p {
 }
 .hide {
   display: none;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 button,
 .btn {
