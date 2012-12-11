@@ -20,7 +20,10 @@
 
     .columnLoop (@index) when (@index > 0) {
       (~".column@{index}") { 
-        width: @index/@columnCount * 100%
+        width: @index/@columnCount * 100%;
+      }
+      (~".offset@{index}") {
+        margin-left: @index/@columnCount * 100%;
       }
       .columnLoop(@index - 1);
 
