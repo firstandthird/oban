@@ -1,15 +1,5 @@
 module.exports = function(grunt) {
   grunt.initConfig({
-    info: '<json:package.json>',
-    meta: {
-      banner: '/*!\n'+
-              ' * <%= info.name %> - <%= info.description %>\n'+
-              ' * v<%= info.version %>\n'+
-              ' * <%= info.homepage %>\n'+
-              ' * copyright <%= info.copyright %> <%= grunt.template.today("yyyy") %>\n'+
-              ' * <%= info.license %> License\n'+
-              '*/'
-    },
     less: {
       full: {
         files: {
