@@ -4,11 +4,31 @@
     <meta charset="utf-8" />
     <title>Buttons</title>
     <link rel="stylesheet" href="baseline.css"/>
+    <style>
+      body {
+        margin: 20px;
+      }
+      button, a {
+        margin: 10px
+      }
+    </style>
   </head>
   <body>
     <button>Reset Button</button>
-    <button class="btn-flat">Flat Button</button>
-    <button class="btn-round">Round Button</button>
-    <a class="btn-round">Round Button Anchor</button>
+    <div>
+      <button class="btn-flat">Flat Button</button>
+      <button class="btn-flat hover">Flat Button</button>
+      <button class="btn-flat active">Flat Button</button>
+    </div>
+    <div>
+      <button class="btn-gradient">Gradient Button</button>
+      <button class="btn-gradient hover">Gradient Button Hover</button>
+      <button class="btn-gradient active">Gradient Button Hover</button>
+    </div>
+    <div>
+      <a class="btn-gradient">Gradient Button Anchor</a>
+      <a class="btn-gradient hover">Gradient Button Anchor</a>
+      <a class="btn-gradient active">Gradient Button Anchor</a>
+    </div>
   </body>
 </html>
