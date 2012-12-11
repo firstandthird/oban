@@ -11,7 +11,6 @@
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.3.17",
-    "grunt-recess": "~0.1.4",
     "grunt-contrib-less": "~0.3.2"
   }
 }
