@@ -13,13 +13,13 @@ module.exports = function(grunt) {
     less: {
       full: {
         files: {
-          'dist/baseline.css': 'sample.less'
+          'examples/baseline.css': 'examples/sample.less'
         }
       }
     },
     watch: {
       js: {
-        files: ['baseline.less', 'sample.less', 'lib/*'],
+        files: ['baseline.less', 'lib/*', 'examples/sample.less'],
         tasks: 'less' 
       }
     },

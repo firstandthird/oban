@@ -382,38 +382,74 @@ p {
 .grid12 .column12 {
   width: 100%;
 }
+.grid12 .offset12 {
+  margin-left: 100%;
+}
 .grid12 .column11 {
   width: 91.66666666666666%;
+}
+.grid12 .offset11 {
+  margin-left: 91.66666666666666%;
 }
 .grid12 .column10 {
   width: 83.33333333333334%;
 }
+.grid12 .offset10 {
+  margin-left: 83.33333333333334%;
+}
 .grid12 .column9 {
   width: 75%;
+}
+.grid12 .offset9 {
+  margin-left: 75%;
 }
 .grid12 .column8 {
   width: 66.66666666666666%;
 }
+.grid12 .offset8 {
+  margin-left: 66.66666666666666%;
+}
 .grid12 .column7 {
   width: 58.333333333333336%;
+}
+.grid12 .offset7 {
+  margin-left: 58.333333333333336%;
 }
 .grid12 .column6 {
   width: 50%;
 }
+.grid12 .offset6 {
+  margin-left: 50%;
+}
 .grid12 .column5 {
   width: 41.66666666666667%;
+}
+.grid12 .offset5 {
+  margin-left: 41.66666666666667%;
 }
 .grid12 .column4 {
   width: 33.33333333333333%;
 }
+.grid12 .offset4 {
+  margin-left: 33.33333333333333%;
+}
 .grid12 .column3 {
   width: 25%;
+}
+.grid12 .offset3 {
+  margin-left: 25%;
 }
 .grid12 .column2 {
   width: 16.666666666666664%;
 }
+.grid12 .offset2 {
+  margin-left: 16.666666666666664%;
+}
 .grid12 .column1 {
   width: 8.333333333333332%;
+}
+.grid12 .offset1 {
+  margin-left: 8.333333333333332%;
 }
 .grid-pad {
   padding: 10px;
