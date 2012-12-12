@@ -1,4 +1,11 @@
 
+0.0.3 / 2012-12-11 
+==================
+
+  * [refactor] update grid to use bl-border-box helper
+  * [feature] modal
+  * [grid] added docs inline
+
 0.0.2 / 2012-12-11 
 ==================
 
