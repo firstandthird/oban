@@ -1,0 +1,32 @@
+
+.bl-modal(@width: 900px) {
+  .bl-border-box();
+  position: fixed;
+  padding: 10px;
+  top: 100px;
+  left: 50%;
+  z-index: 999;
+  overflow: auto;
+  width: @width;
+  margin: 0 0 0 -(@width/2);
+  background-color: #ffffff;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+
+  .border-radius(6px);
+  .box-shadow(0 3px 7px rgba(0, 0, 0, 0.3));
+  background-clip: padding-box;
+
+}
+
+.bl-modal-backdrop {
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 900;
+  background-color: #000000;
+  opacity: 0.8;
+}
