@@ -1,25 +1,23 @@
-/*
-  grid
-
-  Less Usage:
-
-    @import "baseline";
-    .bl-grid(); //defaults to 12 column with 10px gutter size
-    .bl-grid(16, 20px); //16 column with 20px gutter size
-
-  HTML Usage:
-
-    <div class="grid12">
-      <div class="column2">Sidebar</div>
-      <div class="column10">Content</div>
-    </div>
-
-  Offset:
-
-    <div class="grid12">
-      <div class="column2 offset2">This content will be offset to the left by 2 columns</div>
-    </div>
-*/
+//  grid
+//
+//  Less Usage:
+//
+//    @import "baseline";
+//    .bl-grid(); //defaults to 12 column with 10px gutter size
+//    .bl-grid(16, 20px); //16 column with 20px gutter size
+//
+//  HTML Usage:
+//
+//    <div class="grid12">
+//      <div class="column2">Sidebar</div>
+//      <div class="column10">Content</div>
+//    </div>
+//
+//  Offset:
+//
+//    <div class="grid12">
+//      <div class="column2 offset2">This content will be offset to the left by 2 columns</div>
+//    </div>
 .bl-grid(@columnCount: 12, @gutterSize: 10px) {
 
   (~".grid@{columnCount}") {
