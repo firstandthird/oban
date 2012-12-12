@@ -1,5 +1,25 @@
 module.exports = function(grunt) {
   grunt.initConfig({
+    info: '<json:package.json>',
+    meta: {
+      banner: '//\n'+
+              '// <%= info.name %> - <%= info.description %>\n'+
+              '// v<%= info.version %>\n'+
+              '// <%= info.homepage %>\n'+
+              '// copyright <%= info.copyright %> <%= grunt.template.today("yyyy") %>\n'+
+              '// <%= info.license %> License\n'+
+              '//'
+    },
+    concat: {
+      baseline: {
+        src: [
+          '<banner>',
+          'lib/mixins/*.less',
+          'lib/*.less',
+        ],
+        dest: 'baseline.less'
+      }
+    },
     less: {
       full: {
         files: {
@@ -9,8 +29,8 @@ module.exports = function(grunt) {
     },
     watch: {
       js: {
-        files: ['baseline.less', 'lib/*', 'examples/sample.less'],
-        tasks: 'less' 
+        files: ['lib/*', 'examples/sample.less'],
+        tasks: 'default' 
       }
     },
     server:{
@@ -19,6 +39,6 @@ module.exports = function(grunt) {
     }
   });
   grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.registerTask('default', 'less');
+  grunt.registerTask('default', 'concat less');
   grunt.registerTask('dev', 'default server watch');
 }

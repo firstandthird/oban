@@ -4,6 +4,8 @@
   "homepage": "https://github.com/jgallen23/baseline",
   "author": "Greg Allen <@jgaui> (http://jga.me)",
   "version": "0.0.1",
+  "license": "MIT",
+  "copyright": "JGA",
   "repository": {
     "type": "git",
     "url": "https://github.com/jgallen23/baseline.git"
