@@ -23,12 +23,12 @@
 .bl-grid(@columnCount: 12, @gutterSize: 10px) {
 
   (~".grid@{columnCount}") {
-    .box-sizing(border-box);
+    .bl-border-box();
     .bl-clearfix();
 
     [class*=column] {
       float: left;
-      .box-sizing(border-box);
+      .bl-border-box();
       padding: 0 @gutterSize;
 
       &:first-child {
