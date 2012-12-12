@@ -1,4 +1,12 @@
 
+0.0.4 / 2012-12-11 
+==================
+
+  * build[example] rebuilt
+  * feature[core] build single file instead of includes
+  * fix[grid] updated comment to use less comment instead of css
+  * fix[modal] added () to bl-modal-backdrop
+
 0.0.3 / 2012-12-11 
 ==================
 

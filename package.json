@@ -1,9 +1,9 @@
 {
   "name": "baseline",
-  "description": "",
+  "description": "a set of less mixins that give you a starting point when starting a new project",
   "homepage": "https://github.com/jgallen23/baseline",
   "author": "Greg Allen <@jgaui> (http://jga.me)",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "license": "MIT",
   "copyright": "JGA",
   "repository": {
