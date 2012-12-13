@@ -13,6 +13,7 @@
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.3.17",
-    "grunt-contrib-less": "~0.3.2"
+    "grunt-contrib-less": "~0.3.2",
+    "grunt-reloadr": "~0.1.1"
   }
 }

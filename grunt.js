@@ -33,12 +33,18 @@ module.exports = function(grunt) {
         tasks: 'default' 
       }
     },
+    reloadr: {
+      main: [
+        'examples/*'
+      ]
+    },
     server:{
       port: 8000,
       base: '.'
     }
   });
+  grunt.loadNpmTasks('grunt-reloadr');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.registerTask('default', 'concat less');
-  grunt.registerTask('dev', 'default server watch');
+  grunt.registerTask('dev', 'default server reloadr watch');
 }
