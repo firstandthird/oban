@@ -1,4 +1,12 @@
 
+0.0.5 / 2012-12-14 
+==================
+
+  * built[example]
+  * fix[grunt] watch for subfolder canges in lib
+  * refactor[vendor] removed box-shadow and border-radius vendor helpers
+  * added grunt-reloadr
+
 0.0.4 / 2012-12-11 
 ==================
 
