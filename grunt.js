@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     },
     watch: {
       js: {
-        files: ['lib/*', 'examples/sample.less'],
+        files: ['lib/**/*', 'examples/sample.less'],
         tasks: 'default' 
       }
     },
