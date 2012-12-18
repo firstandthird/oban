@@ -3,8 +3,8 @@
 //  Less Usage:
 //
 //    @import "baseline";
-//    .bl-grid(); //defaults to 12 column with 10px gutter size
-//    .bl-grid(16, 20px); //16 column with 20px gutter size
+//    .bl-grid(); //defaults to 12 column with 20px gutter size
+//    .bl-grid(16, 40px); //16 column with 40px gutter size
 //
 //  HTML Usage:
 //
@@ -18,7 +18,7 @@
 //    <div class="grid12">
 //      <div class="column2 offset2">This content will be offset to the left by 2 columns</div>
 //    </div>
-.bl-grid(@columnCount: 12, @gutterSize: 10px) {
+.bl-grid(@columnCount: 12, @gutterSize: 20px) {
 
   (~".grid@{columnCount}") {
     .bl-border-box();
@@ -27,7 +27,7 @@
     [class*=column] {
       float: left;
       .bl-border-box();
-      padding: 0 @gutterSize;
+      padding: 0 @gutterSize/2;
 
       &:first-child {
         padding-left: 0px;
@@ -35,6 +35,10 @@
       &:last-child {
         padding-right: 0px;
       }
+    }
+
+    [class*=offset] {
+      padding-left: @gutterSize/2 !important;
     }
 
     .columnLoop (@index) when (@index > 0) {
