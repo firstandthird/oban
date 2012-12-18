@@ -18,16 +18,25 @@
       div[class^=column] div[class^=column] div {
         background: #bbb;
       }
-      .wrapper {
+      #wrapper {
         width: 900px;
         padding: 10px 0;
         margin: 0 auto;
         background: #f0f0f0;
       }
+
+      .btns {
+        margin: 0 0 10px 10px;
+      }
+
     </style>
   </head>
   <body>
-    <div class="wrapper">
+    <div id="wrapper">
+      <div class="btns">
+        <button class="btn-flat" onclick="fixed()">Fixed Width</button>
+        <button class="btn-flat" onclick="fluid()">Fluid</button>
+      </div>
       <div class="grid12">
         <div class="column1"><div>1</div></div>
         <div class="column1"><div>2</div></div>
@@ -77,5 +86,13 @@
         </div>
       </div>
     </div>
+    <script>
+      var fluid = function() {
+        document.getElementById('wrapper').style.width="100%";
+      };
+      var fixed = function() {
+        document.getElementById('wrapper').style.width="900px";
+      };
+    </script>
   </body>
 </html>

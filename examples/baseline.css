@@ -378,6 +378,9 @@ p {
 .grid12 [class*=column]:last-child {
   padding-right: 0px;
 }
+.grid12 [class*=offset] {
+  padding-left: 10px !important;
+}
 .grid12 .column12 {
   width: 100%;
 }
@@ -451,7 +454,17 @@ p {
   margin-left: 8.333333333333332%;
 }
 .grid-pad {
-  padding: 10px;
+  padding: 20px;
+}
+/*.bl-grid-debug();*/
+.grid-fixed {
+  padding-left: 310px;
+}
+.grid-fixed .column-fixed {
+  position: relative;
+  right: 310px;
+  margin-right: -310px;
+  width: 310px;
 }
 .pull-left {
   float: left;
