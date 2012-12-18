@@ -63,6 +63,19 @@
 
 }
 
+.bl-grid-fixed(@columnSize: 100px, @gutterSize: 20px) {
+
+  @size: @columnSize + (@gutterSize/2);
+  padding-left: @size;
+
+  .column-fixed {
+    position: relative;
+    right: @size;
+    margin-right: -@size;
+    width: @size;
+  }
+}
+
 .bl-grid-debug(@color: red) {
 
   [class*=column] {
