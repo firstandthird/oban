@@ -1,4 +1,13 @@
 
+0.3.0 / 2012-12-18 
+==================
+
+  * example[grid] option to go between fluid and fixed width
+  * example[grid] added fixed column example
+  * feature[grid] added support for a fixed column
+  * feature[grid] added bl-grid-debug to draw outlines around all grids
+  * fix[grid] fixed padding when using offset, more accurate gutter size, updated example
+
 0.2.0 / 2012-12-17 
 ==================
 
