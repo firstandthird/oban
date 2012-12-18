@@ -8,6 +8,7 @@
       .grid12 {
         margin: 20px 0;
       }
+      .column-fixed div,
       div[class^=column] div { 
         padding: 10px 0;
         background: #ddd;
@@ -55,6 +56,25 @@
       </div>
       <div class="grid12">
         <div class="column4 offset2"><div>4 Columns, Offset 2</div></div>
+      </div>
+      <div class="grid12 grid-fixed">
+        <div class="column-fixed">
+          <div>Fixed</div>
+        </div>
+        <div class="column12">
+          <div>12 columns</div>
+        </div>
+      </div>
+      <div class="grid12 grid-fixed">
+        <div class="column-fixed">
+          <div>Fixed</div>
+        </div>
+        <div class="column4">
+          <div>4 columns</div>
+        </div>
+        <div class="column8">
+          <div>8 columns</div>
+        </div>
       </div>
     </div>
   </body>
