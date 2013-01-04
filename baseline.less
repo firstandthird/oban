@@ -1,6 +1,6 @@
 //
 // baseline - a set of less mixins that give you a starting point when starting a new project
-// v0.3.1
+// v0.3.2
 // https://github.com/jgallen23/baseline
 // copyright JGA 2013
 // MIT License
@@ -163,13 +163,11 @@
 
 .bl-grid-fixed(@columnSize: 100px, @gutterSize: 20px) {
 
-  @size: @columnSize + (@gutterSize/2);
+  @size: @columnSize + @gutterSize;
   padding-left: @size;
 
   .column-fixed {
-    position: relative;
-    right: @size;
-    margin-right: -@size;
+    margin-left: -@size;
     width: @size;
   }
 }
