@@ -23,22 +23,13 @@
   (~".grid@{columnCount}") {
     .bl-border-box();
     .bl-clearfix();
+    margin-left: -@gutterSize;
 
     [class*=column] {
       float: left;
       .bl-border-box();
-      padding: 0 @gutterSize/2;
+      padding: 0 0 0 @gutterSize;
 
-      &:first-child {
-        padding-left: 0px;
-      }
-      &:last-child {
-        padding-right: 0px;
-      }
-    }
-
-    [class*=offset] {
-      padding-left: @gutterSize/2 !important;
     }
 
     .columnLoop (@index) when (@index > 0) {
