@@ -1,8 +1,8 @@
 //
 // baseline - a set of less mixins that give you a starting point when starting a new project
-// v0.3.0
+// v0.3.1
 // https://github.com/jgallen23/baseline
-// copyright JGA 2012
+// copyright JGA 2013
 // MIT License
 //
 
@@ -130,22 +130,13 @@
   (~".grid@{columnCount}") {
     .bl-border-box();
     .bl-clearfix();
+    margin-left: -@gutterSize;
 
     [class*=column] {
       float: left;
       .bl-border-box();
-      padding: 0 @gutterSize/2;
+      padding: 0 0 0 @gutterSize;
 
-      &:first-child {
-        padding-left: 0px;
-      }
-      &:last-child {
-        padding-right: 0px;
-      }
-    }
-
-    [class*=offset] {
-      padding-left: @gutterSize/2 !important;
     }
 
     .columnLoop (@index) when (@index > 0) {

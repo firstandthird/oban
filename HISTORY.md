@@ -1,4 +1,10 @@
 
+0.3.1 / 2013-01-03 
+==================
+
+  * [examples] updated grid example
+  * [grid] fixed equal columns
+
 0.3.0 / 2012-12-18 
 ==================
 
