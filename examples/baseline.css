@@ -450,13 +450,11 @@ p {
 }
 /*.bl-grid-debug();*/
 .grid-fixed {
-  padding-left: 310px;
+  padding-left: 320px;
 }
 .grid-fixed .column-fixed {
-  position: relative;
-  right: 310px;
-  margin-right: -310px;
-  width: 310px;
+  margin-left: -320px;
+  width: 320px;
 }
 .pull-left {
   float: left;
