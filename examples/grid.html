@@ -6,16 +6,17 @@
     <link rel="stylesheet" href="baseline.css"/>
     <style>
       .grid12 {
-        margin: 20px 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
       }
       .column-fixed div,
-      div[class^=column] div { 
+      div[class^=column] .name { 
         padding: 10px 0;
         background: #ddd;
         border-radius: 5px;
         text-align: center;
       }
-      div[class^=column] div[class^=column] div {
+      div[class^=column] div[class^=column] .name {
         background: #bbb;
       }
       #wrapper {
@@ -38,51 +39,56 @@
         <button class="btn-flat" onclick="fluid()">Fluid</button>
       </div>
       <div class="grid12">
-        <div class="column1"><div>1</div></div>
-        <div class="column1"><div>2</div></div>
-        <div class="column1"><div>3</div></div>
-        <div class="column1"><div>4</div></div>
-        <div class="column1"><div>5</div></div>
-        <div class="column1"><div>6</div></div>
-        <div class="column1"><div>7</div></div>
-        <div class="column1"><div>8</div></div>
-        <div class="column1"><div>9</div></div>
-        <div class="column1"><div>10</div></div>
-        <div class="column1"><div>11</div></div>
-        <div class="column1"><div>12</div></div>
+        <div class="column1"><div class="name">1</div></div>
+        <div class="column1"><div class="name">2</div></div>
+        <div class="column1"><div class="name">3</div></div>
+        <div class="column1"><div class="name">4</div></div>
+        <div class="column1"><div class="name">5</div></div>
+        <div class="column1"><div class="name">6</div></div>
+        <div class="column1"><div class="name">7</div></div>
+        <div class="column1"><div class="name">8</div></div>
+        <div class="column1"><div class="name">9</div></div>
+        <div class="column1"><div class="name">10</div></div>
+        <div class="column1"><div class="name">11</div></div>
+        <div class="column1"><div class="name">12</div></div>
       </div>
       <div class="grid12">
-        <div class="column2"><div>2 Columns</div></div>
+        <div class="column4"><div class="name">4</div></div>
+        <div class="column4"><div class="name">4</div></div>
+        <div class="column4"><div class="name">4</div></div>
+      </div>
+      <div class="grid12">
+        <div class="column2"><div class="name">2 Columns</div></div>
         <div class="column10">
-          <div>
+          <div class="name">
             10 Columns
             <div class="grid12">
-              <div class="column6"><div>6 Columns</div></div>
-              <div class="column6"><div>6 Columns</div></div>
+              <div class="column6"><div class="name">6 Columns</div></div>
+              <div class="column6"><div class="name">6 Columns</div></div>
             </div>
           </div>
         </div>
       </div>
       <div class="grid12">
-        <div class="column4 offset2"><div>4 Columns, Offset 2</div></div>
+        <div class="column4 offset2"><div class="name">4 Columns, Offset 2</div></div>
       </div>
       <div class="grid12 grid-fixed">
         <div class="column-fixed">
-          <div>Fixed</div>
+          <div class="name">Fixed</div>
         </div>
         <div class="column12">
-          <div>12 columns</div>
+          <div class="name">12 columns</div>
         </div>
       </div>
       <div class="grid12 grid-fixed">
         <div class="column-fixed">
-          <div>Fixed</div>
+          <div class="name">Fixed</div>
         </div>
         <div class="column4">
-          <div>4 columns</div>
+          <div class="name">4 columns</div>
         </div>
         <div class="column8">
-          <div>8 columns</div>
+          <div class="name">8 columns</div>
         </div>
       </div>
     </div>
