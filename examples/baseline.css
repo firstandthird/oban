@@ -1,3 +1,27 @@
+.bl-messages .message-error {
+  background: #f2dede;
+  border: 1px solid #e4b9b9;
+  color: #712d2d;
+  padding: 5px 10px;
+}
+.bl-messages .message-warning {
+  background: #fcf8e3;
+  border: 1px solid #f7ecb5;
+  color: #9c8611;
+  padding: 5px 10px;
+}
+.bl-messages .message-success {
+  background: #dff0d8;
+  border: 1px solid #c1e2b3;
+  color: #3d6c2a;
+  padding: 5px 10px;
+}
+.bl-messages .message-info {
+  background: #f0f0f0;
+  border: 1px solid #d7d7d7;
+  color: #575757;
+  padding: 5px 10px;
+}
 /*! normalize.css v2.0.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -477,6 +501,30 @@ p {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+.message-error {
+  background: #f2dede;
+  border: 1px solid #e4b9b9;
+  color: #712d2d;
+  padding: 5px 10px;
+}
+.message-warning {
+  background: #fcf8e3;
+  border: 1px solid #f7ecb5;
+  color: #9c8611;
+  padding: 5px 10px;
+}
+.message-success {
+  background: #dff0d8;
+  border: 1px solid #c1e2b3;
+  color: #3d6c2a;
+  padding: 5px 10px;
+}
+.message-info {
+  background: #f0f0f0;
+  border: 1px solid #d7d7d7;
+  color: #575757;
+  padding: 5px 10px;
 }
 .clearfix:after {
   content: "";
