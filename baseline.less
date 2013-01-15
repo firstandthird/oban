@@ -1,6 +1,6 @@
 //
 // baseline - a set of less mixins that give you a starting point when starting a new project
-// v0.3.2
+// v0.4.0
 // https://github.com/jgallen23/baseline
 // copyright JGA 2013
 // MIT License
@@ -29,11 +29,84 @@
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down, gets no color-stop at all for proper fallback
 }
 
+.bl-size(@width, @height) {
+  width: @width;
+  height: @height;
+}
+
+.bl-vcenter(@height) {
+  height: @height;
+  line-height: @height;
+}
+
 
 .bl-box-sizing(@boxmodel) {
   -webkit-box-sizing: @boxmodel;
   -moz-box-sizing: @boxmodel;
   box-sizing: @boxmodel;
+}
+
+.bl-arrow-base() {
+  position: relative;
+
+  &:after {
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+  }
+}
+
+.bl-arrow-up(@color, @size: 10px) {
+  .bl-arrow-base();
+
+  &:after {
+    left: 50%;
+    margin-left: -@size;
+    top: -@size;
+    border-left: @size solid transparent;
+    border-right: @size solid transparent;
+    border-bottom: @size solid @color;
+  }
+}
+
+.bl-arrow-right(@color, @size: 10px) {
+  .bl-arrow-base();
+
+  &:after {
+    top: 50%;
+    margin-top: -@size;
+    right: -@size;
+    border-top: @size solid transparent;
+    border-bottom: @size solid transparent;
+    border-left: @size solid @color;
+  }
+}
+
+.bl-arrow-left(@color, @size: 10px) {
+  .bl-arrow-base();
+
+  &:after {
+    top: 50%;
+    margin-top: -@size;
+    left: -@size;
+    border-top: @size solid transparent;
+    border-bottom: @size solid transparent;
+    border-right: @size solid @color;
+  }
+}
+
+.bl-arrow-down(@color, @size: 10px) {
+  .bl-arrow-base();
+
+  &:after {
+    left: 50%;
+    margin-left: -@size;
+    bottom: -@size;
+    border-left: @size solid transparent;
+    border-right: @size solid transparent;
+    border-top: @size solid @color;
+  }
 }
 
 
@@ -193,7 +266,7 @@
 }
 
 .bl-hide() {
-  display: none;
+  display: none !important;
 }
 
 .bl-helpers() {
@@ -231,6 +304,33 @@
   .list-unstyled {
     .bl-list-unstyled();
   }
+}
+
+.bl-message(@color) {
+  background: @color;
+  border: 1px solid darken(@color, 10);
+  color: darken(@color, 60);
+  padding: 5px 10px;
+}
+
+.bl-messages {
+
+  .message-error {
+    .bl-message(#F2DEDE);
+  }
+
+  .message-warning {
+    .bl-message(#FCF8E3);
+  }
+
+  .message-success {
+    .bl-message(#DFF0D8);
+  }
+
+  .message-info {
+    .bl-message(#f0f0f0);
+  }
+
 }
 
 

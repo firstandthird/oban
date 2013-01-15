@@ -1,4 +1,12 @@
 
+0.4.0 / 2013-01-15 
+==================
+
+  * [arrows] added bl-arrow-[dir]
+  * [mixins/utils] added bl-size and bl-vcenter mixins
+  * [helpers] added !important to hide
+  * [lib] bl-messages helper
+
 0.3.2 / 2013-01-04 
 ==================
 
