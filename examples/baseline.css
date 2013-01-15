@@ -463,7 +463,7 @@ p {
   float: right;
 }
 .hide {
-  display: none !important;
+  display: none;
 }
 .list-inline {
   margin: 0;
