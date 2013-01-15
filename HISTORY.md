@@ -1,4 +1,9 @@
 
+0.4.1 / 2013-01-15 
+==================
+
+  * [messages] fixed bl-messages to be a mixing and not auto include
+
 0.4.0 / 2013-01-15 
 ==================
 
