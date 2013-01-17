@@ -470,8 +470,13 @@ p {
   padding: 0;
   list-style: none;
 }
+.list-inline:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .list-inline li {
-  display: inline-block;
+  float: left;
 }
 .list-unstyled {
   margin: 0;
