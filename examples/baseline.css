@@ -607,16 +607,16 @@ button,
   background-color: #000000;
   opacity: 0.8;
 }
-.arrow-up {
+.arrow-top {
   position: relative;
 }
-.arrow-up:after {
+.arrow-top:after {
   content: "";
   height: 0;
   width: 0;
   position: absolute;
 }
-.arrow-up:after {
+.arrow-top:after {
   left: 50%;
   margin-left: -10px;
   top: -10px;
@@ -658,16 +658,16 @@ button,
   border-bottom: 10px solid transparent;
   border-right: 10px solid #cccccc;
 }
-.arrow-down {
+.arrow-bottom {
   position: relative;
 }
-.arrow-down:after {
+.arrow-bottom:after {
   content: "";
   height: 0;
   width: 0;
   position: absolute;
 }
-.arrow-down:after {
+.arrow-bottom:after {
   left: 50%;
   margin-left: -10px;
   bottom: -10px;
