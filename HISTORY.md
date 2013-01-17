@@ -1,4 +1,11 @@
 
+0.4.3 / 2013-01-16 
+==================
+
+  * [mixin/vendor] added bl-transition
+  * [lists] changed list-inline to float with clearfix
+  * [arrows] renamed up/down to top/bottom
+
 0.4.2 / 2013-01-15 
 ==================
 
