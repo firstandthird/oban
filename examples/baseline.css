@@ -779,3 +779,106 @@ button,
   width: 50px;
   height: 50px;
 }
+.spacing html,
+.spacing body,
+.spacing div,
+.spacing span,
+.spacing applet,
+.spacing object,
+.spacing iframe,
+.spacing h1,
+.spacing h2,
+.spacing h3,
+.spacing h4,
+.spacing h5,
+.spacing h6,
+.spacing p,
+.spacing blockquote,
+.spacing pre,
+.spacing a,
+.spacing abbr,
+.spacing acronym,
+.spacing address,
+.spacing big,
+.spacing cite,
+.spacing code,
+.spacing del,
+.spacing dfn,
+.spacing em,
+.spacing img,
+.spacing ins,
+.spacing kbd,
+.spacing q,
+.spacing s,
+.spacing samp,
+.spacing small,
+.spacing strike,
+.spacing strong,
+.spacing sub,
+.spacing sup,
+.spacing tt,
+.spacing var,
+.spacing dl,
+.spacing dt,
+.spacing dd,
+.spacing ol,
+.spacing ul,
+.spacing li,
+.spacing fieldset,
+.spacing form,
+.spacing label,
+.spacing legend,
+.spacing table,
+.spacing caption,
+.spacing tbody,
+.spacing tfoot,
+.spacing thead,
+.spacing tr,
+.spacing th,
+.spacing td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+.spacing body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+.spacing ol,
+.spacing ul {
+  list-style: none;
+}
+.spacing table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+.spacing caption,
+.spacing th,
+.spacing td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+.spacing a img {
+  border: none;
+}
+.spacing .spacing-small {
+  margin-bottom: 10px;
+}
+.spacing .spacing-medium {
+  margin-bottom: 20px;
+}
+.spacing .spacing-large {
+  margin-bottom: 40px;
+}
+.spacing .spacing-xlarge {
+  margin-bottom: 60px;
+}
