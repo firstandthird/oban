@@ -1,6 +1,6 @@
 //
 // baseline - a set of less mixins that give you a starting point when starting a new project
-// v0.4.3
+// v0.5.0
 // https://github.com/jgallen23/baseline
 // copyright JGA 2013
 // MIT License
@@ -27,6 +27,11 @@
   background-image: linear-gradient(@startColor, @midColor @colorStop, @endColor);
   background-repeat: no-repeat;
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down, gets no color-stop at all for proper fallback
+}
+
+.bl-size(@px) {
+  width: @px;
+  height: @px;
 }
 
 .bl-size(@width, @height) {
@@ -749,6 +754,148 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+}
+
+// Based on nib reset.styl (https://github.com/visionmedia/nib/blob/master/lib/nib/reset.styl)
+// Based on [Eric Meyer's reset](http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/)
+
+.bl-reset() {
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td {
+    .bl-reset-box-model();
+    .bl-reset-font();
+  }
+  body {
+    .bl-reset-body();
+  }
+  ol, ul {
+    list-style: none;
+  }
+  table {
+    .bl-reset-table();
+  }
+  caption, th, td {
+    .bl-reset-table-cell();
+  }
+  a img {
+    border: none;
+  }
+}
+
+.bl-nested-reset() {
+  div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+  pre, a, abbr, acronym, address, code, del, dfn, em, img,
+  dl, dt, dd, ol, ul, li, fieldset, form, label,
+  legend, caption, tbody, tfoot, thead, tr {
+    .bl-reset-box-model();
+    .bl-reset-font();
+  }
+  table {
+    .bl-reset-table();
+  }
+  caption, th, td {
+    .bl-reset-table-cell();
+  }
+  a img {
+    border: none;
+  }
+}
+
+.bl-reset-box-model() {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+.bl-reset-font() {
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+.bl-reset-body() {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+.bl-reset-table() {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+.bl-reset-table-cell() {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+.bl-reset-html5() {
+  article, aside, canvas, details, figcaption,
+  figure, footer, header, hgroup, menu, nav,
+  section, summary {
+    .bl-reset-box-model();
+    display: block;
+  }
+  audio, canvas, video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+  }
+  audio:not([controls]),[hidden] {
+    display: none;
+  }
+}
+
+@bl-spacing-small: 10px;
+@bl-spacing-medium: 20px;
+@bl-spacing-large: 40px;
+@bl-spacing-xlarge: 60px;
+
+.bl-spacing-small() {
+  margin-bottom: @bl-spacing-small;
+}
+
+.bl-spacing-medium() {
+  margin-bottom: @bl-spacing-medium;
+}
+
+.bl-spacing-large() {
+  margin-bottom: @bl-spacing-large;
+}
+
+.bl-spacing-xlarge() {
+  margin-bottom: @bl-spacing-xlarge;
+}
+
+.bl-spacing-helpers() {
+
+  .spacing-small {
+    .bl-spacing-small();
+  }
+
+  .spacing-medium {
+    .bl-spacing-medium();
+  }
+
+  .spacing-large {
+    .bl-spacing-large();
+  }
+
+  .spacing-xlarge {
+    .bl-spacing-xlarge();
+  }
+
 }
 
 .bl-typography(@family: 'Helvetica', @bodySize: 16px, @lineHeight: 24px) {

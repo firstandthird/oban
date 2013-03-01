@@ -1,4 +1,16 @@
 
+0.5.0 / 2013-03-01 
+==================
+
+  * [maint] moved info to component.json
+  * [spacing] namespaced variables
+  * [examples] added spacing example
+  * [lib] added spacing.less to provide helper mixins/classes for margin
+  * [examples] updated sample.less to include a .bl-size example
+  * [lib] .bl-size now will take 1 or 2 args
+  * [examples] added reset example
+  * [lib] added .bl-reset() and .bl-reset-html5()
+
 0.4.4 / 2013-02-13 
 ==================
 

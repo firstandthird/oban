@@ -1,6 +1,6 @@
 {
   "name": "baseline",
-  "version": "0.4.4",
+  "version": "0.5.0",
   "main": "baseline.less",
   "description": "a set of less mixins that give you a starting point when starting a new project",
   "homepage": "https://github.com/jgallen23/baseline",
