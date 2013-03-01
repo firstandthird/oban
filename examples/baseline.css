@@ -326,35 +326,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-h1,
-h2,
-h3,
-h4,
-p {
-  margin: 0;
-}
-h1 {
-  font-size: 68px;
-  line-height: 96px;
-}
-h2 {
-  font-size: 42px;
-  line-height: 48px;
-}
-h3 {
-  font-size: 26px;
-}
-h4 {
-  font-size: 20px;
-}
-body {
-  font-size: 16px;
-  font-family: 'Helvetica';
-  line-height: 24px;
-}
-p {
-  margin-bottom: 24px;
-}
 .grid12 {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -455,6 +426,35 @@ p {
 .grid-fixed .column-fixed {
   margin-left: -320px;
   width: 320px;
+}
+.typography h1,
+.typography h2,
+.typography h3,
+.typography h4,
+.typography p {
+  margin: 0;
+}
+.typography h1 {
+  font-size: 68px;
+  line-height: 96px;
+}
+.typography h2 {
+  font-size: 42px;
+  line-height: 48px;
+}
+.typography h3 {
+  font-size: 26px;
+}
+.typography h4 {
+  font-size: 20px;
+}
+.typography body {
+  font-size: 16px;
+  font-family: 'Helvetica';
+  line-height: 24px;
+}
+.typography p {
+  margin-bottom: 24px;
 }
 .pull-left {
   float: left;
@@ -679,4 +679,95 @@ button,
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 10px solid #cccccc;
+}
+.reset html,
+.reset body,
+.reset div,
+.reset span,
+.reset applet,
+.reset object,
+.reset iframe,
+.reset h1,
+.reset h2,
+.reset h3,
+.reset h4,
+.reset h5,
+.reset h6,
+.reset p,
+.reset blockquote,
+.reset pre,
+.reset a,
+.reset abbr,
+.reset acronym,
+.reset address,
+.reset big,
+.reset cite,
+.reset code,
+.reset del,
+.reset dfn,
+.reset em,
+.reset img,
+.reset ins,
+.reset kbd,
+.reset q,
+.reset s,
+.reset samp,
+.reset small,
+.reset strike,
+.reset strong,
+.reset sub,
+.reset sup,
+.reset tt,
+.reset var,
+.reset dl,
+.reset dt,
+.reset dd,
+.reset ol,
+.reset ul,
+.reset li,
+.reset fieldset,
+.reset form,
+.reset label,
+.reset legend,
+.reset table,
+.reset caption,
+.reset tbody,
+.reset tfoot,
+.reset thead,
+.reset tr,
+.reset th,
+.reset td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+.reset body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+.reset ol,
+.reset ul {
+  list-style: none;
+}
+.reset table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+.reset caption,
+.reset th,
+.reset td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+.reset a img {
+  border: none;
 }
