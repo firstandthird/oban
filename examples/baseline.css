@@ -427,6 +427,13 @@ table {
   margin-left: -320px;
   width: 320px;
 }
+.grid-fixed-right {
+  padding-right: 320px;
+}
+.grid-fixed-right .column-fixed {
+  margin-right: -320px;
+  width: 320px;
+}
 .typography h1,
 .typography h2,
 .typography h3,
