@@ -1,4 +1,10 @@
 
+0.5.1 / 2013-03-04 
+==================
+
+  * [examples/grid] added right side fixed column example
+  * [grid] added .bl-grid-fixed-right for a right side fixed column
+
 0.5.0 / 2013-03-01 
 ==================
 

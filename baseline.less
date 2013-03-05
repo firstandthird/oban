@@ -1,6 +1,6 @@
 //
 // baseline - a set of less mixins that give you a starting point when starting a new project
-// v0.5.0
+// v0.5.1
 // https://github.com/jgallen23/baseline
 // copyright JGA 2013
 // MIT License
@@ -254,6 +254,22 @@
     margin-left: -@size;
     width: @size;
   }
+}
+
+.bl-grid-fixed-left(@columnSize, @gutterSize) {
+  .bl-grid-fixed(@columnSize, @gutterSize);
+}
+
+.bl-grid-fixed-right(@columnSize: 100px, @gutterSize: 20px) {
+
+  @size: @columnSize + @gutterSize;
+  padding-right: @size;
+
+  .column-fixed {
+    margin-right: -@size;
+    width: @size;
+  }
+
 }
 
 .bl-grid-debug(@color: red) {
