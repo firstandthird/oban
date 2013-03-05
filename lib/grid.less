@@ -66,6 +66,22 @@
   }
 }
 
+.bl-grid-fixed-left(@columnSize, @gutterSize) {
+  .bl-grid-fixed(@columnSize, @gutterSize);
+}
+
+.bl-grid-fixed-right(@columnSize: 100px, @gutterSize: 20px) {
+
+  @size: @columnSize + @gutterSize;
+  padding-right: @size;
+
+  .column-fixed {
+    margin-right: -@size;
+    width: @size;
+  }
+
+}
+
 .bl-grid-debug(@color: red) {
 
   [class*=column] {
