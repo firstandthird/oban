@@ -618,6 +618,7 @@ button,
   z-index: 900;
   background-color: #000000;
   opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 }
 .arrow-top {
   position: relative;
