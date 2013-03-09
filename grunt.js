@@ -40,7 +40,8 @@ module.exports = function(grunt) {
     },
     server:{
       port: 8000,
-      base: '.'
+      base: '.',
+      hostname: '*'
     }
   });
   grunt.loadNpmTasks('grunt-reloadr');
