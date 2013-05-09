@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
   grunt.initConfig({
-    info: '<json:component.json>',
+    info: '<json:bower.json>',
     meta: {
       banner: '//\n'+
               '// <%= info.name %> - <%= info.description %>\n'+
