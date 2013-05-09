@@ -890,3 +890,20 @@ button,
 .spacing .spacing-xlarge {
   margin-bottom: 60px;
 }
+.bar {
+  background-color: #366ba1;
+  background-image: -moz-linear-gradient(top, #407fbf, #264c73);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#407fbf), to(#264c73));
+  background-image: -webkit-linear-gradient(top, #407fbf, #264c73);
+  background-image: -o-linear-gradient(top, #407fbf, #264c73);
+  background-image: linear-gradient(to bottom, #407fbf, #264c73);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff407fbf', endColorstr='#ff264c73', GradientType=0);
+  height: 50px;
+}
+.bar .title {
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 50px;
+  padding: 0 20px;
+}
