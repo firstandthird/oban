@@ -470,7 +470,7 @@ table {
 }
 .typography body {
   font-size: 14px;
-  font-family: "'Helvetica Neue', Helvetica, Arial, sans-serif";
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 20px;
 }
 .pull-left {
