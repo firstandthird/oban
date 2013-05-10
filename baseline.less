@@ -1,6 +1,6 @@
 //
 // baseline - a set of less mixins that give you a starting point when starting a new project
-// v0.6.0
+// v0.6.1
 // https://github.com/jgallen23/baseline
 // copyright JGA 2013
 // MIT License
@@ -963,7 +963,7 @@ table {
 
 }
 
-.bl-typography(@family: "'Helvetica Neue', Helvetica, Arial, sans-serif", @bodySize: 14px, @lineHeight: 20px) {
+.bl-typography(@family: ~"'Helvetica Neue', Helvetica, Arial, sans-serif", @bodySize: 14px, @lineHeight: 20px) {
   .font-size(@factor: 1) {
     font-size: @bodySize * @factor;
   }
