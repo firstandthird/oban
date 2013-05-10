@@ -1,4 +1,19 @@
 
+0.6.0 / 2013-05-09 
+==================
+
+  * [examples/button] added class to reset button
+  * [example/modal] updated
+  * [lib/modal] added button.close style and tweaked padding
+  * [example] updated typography example
+  * [lib] updated typography to be closer to what bootstrap does
+  * [example] added tabs example
+  * [lib] added bl-tabs
+  * [bower] renamed component.json to bower.json
+  * [example] fixed title on arrows example
+  * [example] added bar example
+  * [lib] added bl-bar
+
 0.5.2 / 2013-03-08 
 ==================
 
