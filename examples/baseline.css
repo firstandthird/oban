@@ -438,30 +438,40 @@ table {
 .typography h2,
 .typography h3,
 .typography h4,
-.typography p {
+.typography h5,
+.typography h6 {
   margin: 0;
+  text-rendering: optimizelegibility;
 }
 .typography h1 {
-  font-size: 68px;
-  line-height: 96px;
+  font-size: 38.5px;
+  line-height: 50px;
 }
 .typography h2 {
-  font-size: 42px;
-  line-height: 48px;
+  font-size: 31.5px;
+  line-height: 40px;
 }
 .typography h3 {
-  font-size: 26px;
+  font-size: 24.5px;
+  line-height: 40px;
 }
 .typography h4 {
-  font-size: 20px;
+  font-size: 17.5px;
 }
-.typography body {
-  font-size: 16px;
-  font-family: 'Helvetica';
-  line-height: 24px;
+.typography h5 {
+  font-size: 14px;
+}
+.typography h6 {
+  font-size: 11.9px;
 }
 .typography p {
-  margin-bottom: 24px;
+  margin: 0;
+  line-height: 20px;
+}
+.typography body {
+  font-size: 14px;
+  font-family: "'Helvetica Neue', Helvetica, Arial, sans-serif";
+  line-height: 20px;
 }
 .pull-left {
   float: left;
