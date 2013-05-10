@@ -529,7 +529,6 @@ table {
   display: table;
   clear: both;
 }
-button,
 .btn {
   cursor: pointer;
   display: inline-block;
@@ -605,7 +604,7 @@ button,
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: fixed;
-  padding: 10px;
+  padding: 20px;
   top: 100px;
   left: 50%;
   z-index: 999;
@@ -618,6 +617,22 @@ button,
   border-radius: 6px;
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   background-clip: padding-box;
+}
+.modal button.close {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  border: 0;
+  background: transparent;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 4px 12px;
+  float: right;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+}
+.modal button.close:hover {
+  border: 1px solid #b2b2b2;
 }
 .modal-backdrop {
   position: fixed;
