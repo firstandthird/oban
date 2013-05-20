@@ -961,3 +961,20 @@ table {
   border-bottom: 1px solid #ffffff;
   background: #ffffff;
 }
+.warning,
+.success,
+.error {
+  line-height: 30px;
+}
+.warning {
+  background: #f9fad2;
+  color: #888b0f;
+}
+.error {
+  background: #f2dede;
+  color: #712d2d;
+}
+.success {
+  background: #dff0d8;
+  color: #3d6c2a;
+}
