@@ -1,4 +1,12 @@
 
+0.6.2 / 2013-05-19 
+==================
+
+  * [lib/bar] added option for font-size
+  * [lib/bar] added box-shadow to bar
+  * [examples] added colors example
+  * [lib] add colors less for warning, error and success
+
 0.6.1 / 2013-05-09 
 ==================
 

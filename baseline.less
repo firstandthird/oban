@@ -1,6 +1,6 @@
 //
 // baseline - a set of less mixins that give you a starting point when starting a new project
-// v0.6.1
+// v0.6.2
 // https://github.com/jgallen23/baseline
 // copyright JGA 2013
 // MIT License
@@ -119,14 +119,15 @@
   }
 }
 
-.bl-bar(@bg: #333, @fg: #fff, @height: 50px, @degree: 10) {
+.bl-bar(@bg: #333, @fg: #fff, @height: 50px, @fontSize: 20px, @degree: 10) {
 
   .bl-gradient(lighten(@bg, @degree), darken(@bg, @degree));
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
   height: @height;
 
   .title {
     color: @fg;
-    font-size: 20px;
+    font-size: @fontSize;
     line-height: @height;
     padding: 0 20px;
   }
@@ -201,6 +202,13 @@
     clear: both;
   }
 }
+
+@bl-warning-bg: #f9fad2;
+@bl-warning: darken(@bl-warning-bg, 60);
+@bl-error-bg: #f2dede;
+@bl-error: darken(@bl-error-bg, 60);
+@bl-success-bg: #dff0d8;
+@bl-success: darken(@bl-success-bg, 60);
 
 //  grid
 //
