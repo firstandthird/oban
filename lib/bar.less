@@ -1,4 +1,4 @@
-.bl-bar(@bg: #333, @fg: #fff, @height: 50px, @degree: 10) {
+.bl-bar(@bg: #333, @fg: #fff, @height: 50px, @fontSize: 20px, @degree: 10) {
 
   .bl-gradient(lighten(@bg, @degree), darken(@bg, @degree));
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
@@ -6,7 +6,7 @@
 
   .title {
     color: @fg;
-    font-size: 20px;
+    font-size: @fontSize;
     line-height: @height;
     padding: 0 20px;
   }
