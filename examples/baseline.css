@@ -924,6 +924,7 @@ table {
   background-image: linear-gradient(to bottom, #407fbf, #264c73);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff407fbf', endColorstr='#ff264c73', GradientType=0);
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
   height: 50px;
 }
 .bar .title {
