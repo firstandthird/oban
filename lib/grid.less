@@ -19,9 +19,9 @@
 //    <div class="grid12">
 //      <div class="column2 offset2">This content will be offset to the left by 2 columns</div>
 //    </div>
-.bl-grid(@columnCount: 12, @gutterSize: 20px, @prefix: "grid") {
+.bl-grid(@columnCount: 12, @gutterSize: 20px, @prefix: grid) {
 
-  (~".@{prefix}@{columnCount}") {
+  .@{prefix}@{columnCount} {
     .bl-border-box();
     .bl-clearfix();
     margin-left: -@gutterSize;
@@ -34,10 +34,10 @@
     }
 
     .columnLoop (@index) when (@index > 0) {
-      (~".column@{index}") { 
+      .column@{index} { 
         width: @index/@columnCount * 100%;
       }
-      (~".offset@{index}") {
+      .offset@{index} {
         margin-left: @index/@columnCount * 100%;
       }
       .columnLoop(@index - 1);

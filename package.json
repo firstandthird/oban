@@ -4,8 +4,11 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "grunt": "~0.3.17",
-    "grunt-contrib-less": "~0.3.2",
+    "grunt": "~0.4.1",
+    "grunt-contrib-less": "~0.6.1",
     "grunt-reloadr": "~0.1.1"
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-connect": "~0.3.0",
+    "grunt-contrib-watch": "~0.4.3"
   }
 }

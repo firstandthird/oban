@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
   grunt.initConfig({
-    info: '<json:bower.json>',
+    info: grunt.file.readJSON('bower.json'),
     meta: {
       banner: '//\n'+
               '// <%= info.name %> - <%= info.description %>\n'+
@@ -8,12 +8,14 @@ module.exports = function(grunt) {
               '// <%= info.homepage %>\n'+
               '// copyright <%= info.copyright %> <%= grunt.template.today("yyyy") %>\n'+
               '// <%= info.license %> License\n'+
-              '//'
+              '//\n'
     },
     concat: {
+      options: {
+        banner: '<%= meta.banner %>'
+      },
       baseline: {
         src: [
-          '<banner>',
           'lib/mixins/*.less',
           'lib/*.less',
         ],
@@ -29,8 +31,11 @@ module.exports = function(grunt) {
     },
     watch: {
       js: {
-        files: ['lib/**/*', 'examples/sample.less'],
-        tasks: 'default' 
+        files: [
+          'lib/**/*', 
+          'examples/sample.less'
+        ],
+        tasks: 'default'
       }
     },
     reloadr: {
@@ -38,14 +43,21 @@ module.exports = function(grunt) {
         'examples/*'
       ]
     },
-    server:{
-      port: 8000,
-      base: '.',
-      hostname: '*'
+    connect:{
+      examples: {
+        options: {
+          base: 'examples',
+          hostname: '*'
+        }
+      }
     }
   });
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-reloadr');
   grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.registerTask('default', 'concat less');
-  grunt.registerTask('dev', 'default server reloadr watch');
-}
+  grunt.registerTask('default', ['concat', 'less']);
+  grunt.registerTask('dev', ['connect', 'reloadr', 'watch']);
+};
