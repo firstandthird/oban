@@ -1,9 +1,9 @@
 {
-  "name": "baseline",
+  "name": "oban",
   "version": "0.6.2",
-  "main": "baseline.less",
+  "main": "oban.less",
   "description": "a set of less mixins that give you a starting point when starting a new project",
-  "homepage": "https://github.com/jgallen23/baseline",
+  "homepage": "https://github.com/jgallen23/oban",
   "license": "MIT",
   "copyright": "JGA"
 }

@@ -1,11 +1,10 @@
 //
-// baseline - a set of less mixins that give you a starting point when starting a new project
+// oban - a set of less mixins that give you a starting point when starting a new project
 // v0.6.2
-// https://github.com/jgallen23/baseline
+// https://github.com/jgallen23/oban
 // copyright JGA 2013
 // MIT License
 //
-
 .bl-gradient(@startColor: #555, @endColor: #333) {
   background-color: mix(@startColor, @endColor, 60%);
   background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
@@ -214,7 +213,7 @@
 //
 //  Less Usage:
 //
-//    @import "baseline";
+//    @import "oban";
 //    .bl-grid(); //defaults to 12 column, 20px gutter size and prefix of grid
 //    .bl-grid(16, 40px); //16 column with 40px gutter size
 //    .bl-grid(16, 40px, "row"); //16 column with 40px gutter size, set prefix to row: <div class="row12">
@@ -231,9 +230,9 @@
 //    <div class="grid12">
 //      <div class="column2 offset2">This content will be offset to the left by 2 columns</div>
 //    </div>
-.bl-grid(@columnCount: 12, @gutterSize: 20px, @prefix: "grid") {
+.bl-grid(@columnCount: 12, @gutterSize: 20px, @prefix: grid) {
 
-  (~".@{prefix}@{columnCount}") {
+  .@{prefix}@{columnCount} {
     .bl-border-box();
     .bl-clearfix();
     margin-left: -@gutterSize;
@@ -246,10 +245,10 @@
     }
 
     .columnLoop (@index) when (@index > 0) {
-      (~".column@{index}") { 
+      .column@{index} { 
         width: @index/@columnCount * 100%;
       }
-      (~".offset@{index}") {
+      .offset@{index} {
         margin-left: @index/@columnCount * 100%;
       }
       .columnLoop(@index - 1);

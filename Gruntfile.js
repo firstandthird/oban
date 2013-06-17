@@ -14,18 +14,18 @@ module.exports = function(grunt) {
       options: {
         banner: '<%= meta.banner %>'
       },
-      baseline: {
+      oban: {
         src: [
           'lib/mixins/*.less',
           'lib/*.less',
         ],
-        dest: 'baseline.less'
+        dest: 'oban.less'
       }
     },
     less: {
       full: {
         files: {
-          'examples/baseline.css': 'examples/sample.less'
+          'examples/oban.css': 'examples/sample.less'
         }
       }
     },
