@@ -421,7 +421,7 @@ table {
 .grid-pad {
   padding: 20px;
 }
-/*.bl-grid-debug();*/
+/*.oban-grid-debug();*/
 .grid-fixed {
   padding-left: 320px;
 }

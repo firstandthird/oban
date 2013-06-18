@@ -1,7 +1,7 @@
 // Based on nib reset.styl (https://github.com/visionmedia/nib/blob/master/lib/nib/reset.styl)
 // Based on [Eric Meyer's reset](http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/)
 
-.bl-reset() {
+.oban-reset() {
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -10,53 +10,53 @@
   dl, dt, dd, ol, ul, li,
   fieldset, form, label, legend,
   table, caption, tbody, tfoot, thead, tr, th, td {
-    .bl-reset-box-model();
-    .bl-reset-font();
+    .oban-reset-box-model();
+    .oban-reset-font();
   }
   body {
-    .bl-reset-body();
+    .oban-reset-body();
   }
   ol, ul {
     list-style: none;
   }
   table {
-    .bl-reset-table();
+    .oban-reset-table();
   }
   caption, th, td {
-    .bl-reset-table-cell();
+    .oban-reset-table-cell();
   }
   a img {
     border: none;
   }
 }
 
-.bl-nested-reset() {
+.oban-nested-reset() {
   div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
   pre, a, abbr, acronym, address, code, del, dfn, em, img,
   dl, dt, dd, ol, ul, li, fieldset, form, label,
   legend, caption, tbody, tfoot, thead, tr {
-    .bl-reset-box-model();
-    .bl-reset-font();
+    .oban-reset-box-model();
+    .oban-reset-font();
   }
   table {
-    .bl-reset-table();
+    .oban-reset-table();
   }
   caption, th, td {
-    .bl-reset-table-cell();
+    .oban-reset-table-cell();
   }
   a img {
     border: none;
   }
 }
 
-.bl-reset-box-model() {
+.oban-reset-box-model() {
   margin: 0;
   padding: 0;
   border: 0;
   outline: 0;
 }
 
-.bl-reset-font() {
+.oban-reset-font() {
   font-weight: inherit;
   font-style: inherit;
   font-family: inherit;
@@ -64,29 +64,29 @@
   vertical-align: baseline;
 }
 
-.bl-reset-body() {
+.oban-reset-body() {
   line-height: 1;
   color: black;
   background: white;
 }
 
-.bl-reset-table() {
+.oban-reset-table() {
   border-collapse: separate;
   border-spacing: 0;
   vertical-align: middle;
 }
 
-.bl-reset-table-cell() {
+.oban-reset-table-cell() {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-.bl-reset-html5() {
+.oban-reset-html5() {
   article, aside, canvas, details, figcaption,
   figure, footer, header, hgroup, menu, nav,
   section, summary {
-    .bl-reset-box-model();
+    .oban-reset-box-model();
     display: block;
   }
   audio, canvas, video {

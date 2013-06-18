@@ -3,9 +3,9 @@
 //  Less Usage:
 //
 //    @import "oban";
-//    .bl-grid(); //defaults to 12 column, 20px gutter size and prefix of grid
-//    .bl-grid(16, 40px); //16 column with 40px gutter size
-//    .bl-grid(16, 40px, "row"); //16 column with 40px gutter size, set prefix to row: <div class="row12">
+//    .oban-grid(); //defaults to 12 column, 20px gutter size and prefix of grid
+//    .oban-grid(16, 40px); //16 column with 40px gutter size
+//    .oban-grid(16, 40px, "row"); //16 column with 40px gutter size, set prefix to row: <div class="row12">
 //
 //  HTML Usage:
 //
@@ -19,16 +19,16 @@
 //    <div class="grid12">
 //      <div class="column2 offset2">This content will be offset to the left by 2 columns</div>
 //    </div>
-.bl-grid(@columnCount: 12, @gutterSize: 20px, @prefix: grid) {
+.oban-grid(@columnCount: 12, @gutterSize: 20px, @prefix: grid) {
 
   .@{prefix}@{columnCount} {
-    .bl-border-box();
-    .bl-clearfix();
+    .oban-border-box();
+    .oban-clearfix();
     margin-left: -@gutterSize;
 
     [class*=column] {
       float: left;
-      .bl-border-box();
+      .oban-border-box();
       padding: 0 0 0 @gutterSize;
 
     }
@@ -55,7 +55,7 @@
 
 }
 
-.bl-grid-fixed(@columnSize: 100px, @gutterSize: 20px) {
+.oban-grid-fixed(@columnSize: 100px, @gutterSize: 20px) {
 
   @size: @columnSize + @gutterSize;
   padding-left: @size;
@@ -66,11 +66,11 @@
   }
 }
 
-.bl-grid-fixed-left(@columnSize, @gutterSize) {
-  .bl-grid-fixed(@columnSize, @gutterSize);
+.oban-grid-fixed-left(@columnSize, @gutterSize) {
+  .oban-grid-fixed(@columnSize, @gutterSize);
 }
 
-.bl-grid-fixed-right(@columnSize: 100px, @gutterSize: 20px) {
+.oban-grid-fixed-right(@columnSize: 100px, @gutterSize: 20px) {
 
   @size: @columnSize + @gutterSize;
   padding-right: @size;
@@ -82,7 +82,7 @@
 
 }
 
-.bl-grid-debug(@color: red) {
+.oban-grid-debug(@color: red) {
 
   [class*=column] {
     outline: 1px solid @color;
