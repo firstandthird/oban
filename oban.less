@@ -1,11 +1,11 @@
 //
 // oban - a set of less mixins that give you a starting point when starting a new project
-// v0.6.2
+// v0.7.0
 // https://github.com/jgallen23/oban
 // copyright JGA 2013
 // MIT License
 //
-.bl-gradient(@startColor: #555, @endColor: #333) {
+.oban-gradient(@startColor: #555, @endColor: #333) {
   background-color: mix(@startColor, @endColor, 60%);
   background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
@@ -17,7 +17,7 @@
 }
 
 
-.bl-gradient-three-color(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
+.oban-gradient-three-color(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
   background-color: mix(@midColor, @endColor, 80%);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
   background-image: -webkit-linear-gradient(@startColor, @midColor @colorStop, @endColor);
@@ -28,34 +28,34 @@
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down, gets no color-stop at all for proper fallback
 }
 
-.bl-size(@px) {
+.oban-size(@px) {
   width: @px;
   height: @px;
 }
 
-.bl-size(@width, @height) {
+.oban-size(@width, @height) {
   width: @width;
   height: @height;
 }
 
-.bl-vcenter(@height) {
+.oban-vcenter(@height) {
   height: @height;
   line-height: @height;
 }
 
 
-.bl-box-sizing(@boxmodel) {
+.oban-box-sizing(@boxmodel) {
   -webkit-box-sizing: @boxmodel;
   -moz-box-sizing: @boxmodel;
   box-sizing: @boxmodel;
 }
 
-.bl-transition(@prop: all, @duration:0.2s, @ease:ease-out) {
+.oban-transition(@prop: all, @duration:0.2s, @ease:ease-out) {
   -webkit-transition: @prop @duration @ease;
   transition: @prop @duration @ease;
 }
 
-.bl-arrow-base() {
+.oban-arrow-base() {
   position: relative;
 
   &:after {
@@ -66,8 +66,8 @@
   }
 }
 
-.bl-arrow-top(@color, @size: 10px) {
-  .bl-arrow-base();
+.oban-arrow-top(@color, @size: 10px) {
+  .oban-arrow-base();
 
   &:after {
     left: 50%;
@@ -79,8 +79,8 @@
   }
 }
 
-.bl-arrow-right(@color, @size: 10px) {
-  .bl-arrow-base();
+.oban-arrow-right(@color, @size: 10px) {
+  .oban-arrow-base();
 
   &:after {
     top: 50%;
@@ -92,8 +92,8 @@
   }
 }
 
-.bl-arrow-left(@color, @size: 10px) {
-  .bl-arrow-base();
+.oban-arrow-left(@color, @size: 10px) {
+  .oban-arrow-base();
 
   &:after {
     top: 50%;
@@ -105,8 +105,8 @@
   }
 }
 
-.bl-arrow-bottom(@color, @size: 10px) {
-  .bl-arrow-base();
+.oban-arrow-bottom(@color, @size: 10px) {
+  .oban-arrow-base();
 
   &:after {
     left: 50%;
@@ -118,9 +118,9 @@
   }
 }
 
-.bl-bar(@bg: #333, @fg: #fff, @height: 50px, @fontSize: 20px, @degree: 10) {
+.oban-bar(@bg: #333, @fg: #fff, @height: 50px, @fontSize: 20px, @degree: 10) {
 
-  .bl-gradient(lighten(@bg, @degree), darken(@bg, @degree));
+  .oban-gradient(lighten(@bg, @degree), darken(@bg, @degree));
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
   height: @height;
 
@@ -134,7 +134,7 @@
 }
 
 
-.bl-button-reset() {
+.oban-button-reset() {
   cursor: pointer;
   display: inline-block;
   text-align: center;
@@ -146,9 +146,9 @@
   padding: 4px 12px;
 }
 
-.bl-button-flat(@bgColor: #333, @textColor: #fff, @hoverBgColor: #336699, @hoverTextColor: #fff) {
+.oban-button-flat(@bgColor: #333, @textColor: #fff, @hoverBgColor: #336699, @hoverTextColor: #fff) {
 
-  .bl-button-reset();
+  .oban-button-reset();
 
   background-color: @bgColor;
   color: @textColor;
@@ -171,13 +171,13 @@
 
 }
 
-.bl-button-gradient(@bgColor: #fff, @textColor: #333, @hoverBgColor: #666, @hoverTextColor: #fff) {
+.oban-button-gradient(@bgColor: #fff, @textColor: #333, @hoverBgColor: #666, @hoverTextColor: #fff) {
 
-  .bl-button-reset();
+  .oban-button-reset();
 
   color: @textColor;
 
-  .bl-gradient(@bgColor, darken(@bgColor, 20));
+  .oban-gradient(@bgColor, darken(@bgColor, 20));
   box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   border: 1px solid darken(@bgColor, 20);
 
@@ -194,7 +194,7 @@
   }
 }
 
-.bl-clearfix() {
+.oban-clearfix() {
   &:after {
     content: "";
     display: table;
@@ -214,9 +214,9 @@
 //  Less Usage:
 //
 //    @import "oban";
-//    .bl-grid(); //defaults to 12 column, 20px gutter size and prefix of grid
-//    .bl-grid(16, 40px); //16 column with 40px gutter size
-//    .bl-grid(16, 40px, "row"); //16 column with 40px gutter size, set prefix to row: <div class="row12">
+//    .oban-grid(); //defaults to 12 column, 20px gutter size and prefix of grid
+//    .oban-grid(16, 40px); //16 column with 40px gutter size
+//    .oban-grid(16, 40px, "row"); //16 column with 40px gutter size, set prefix to row: <div class="row12">
 //
 //  HTML Usage:
 //
@@ -230,16 +230,16 @@
 //    <div class="grid12">
 //      <div class="column2 offset2">This content will be offset to the left by 2 columns</div>
 //    </div>
-.bl-grid(@columnCount: 12, @gutterSize: 20px, @prefix: grid) {
+.oban-grid(@columnCount: 12, @gutterSize: 20px, @prefix: grid) {
 
   .@{prefix}@{columnCount} {
-    .bl-border-box();
-    .bl-clearfix();
+    .oban-border-box();
+    .oban-clearfix();
     margin-left: -@gutterSize;
 
     [class*=column] {
       float: left;
-      .bl-border-box();
+      .oban-border-box();
       padding: 0 0 0 @gutterSize;
 
     }
@@ -266,7 +266,7 @@
 
 }
 
-.bl-grid-fixed(@columnSize: 100px, @gutterSize: 20px) {
+.oban-grid-fixed(@columnSize: 100px, @gutterSize: 20px) {
 
   @size: @columnSize + @gutterSize;
   padding-left: @size;
@@ -277,11 +277,11 @@
   }
 }
 
-.bl-grid-fixed-left(@columnSize, @gutterSize) {
-  .bl-grid-fixed(@columnSize, @gutterSize);
+.oban-grid-fixed-left(@columnSize, @gutterSize) {
+  .oban-grid-fixed(@columnSize, @gutterSize);
 }
 
-.bl-grid-fixed-right(@columnSize: 100px, @gutterSize: 20px) {
+.oban-grid-fixed-right(@columnSize: 100px, @gutterSize: 20px) {
 
   @size: @columnSize + @gutterSize;
   padding-right: @size;
@@ -293,7 +293,7 @@
 
 }
 
-.bl-grid-debug(@color: red) {
+.oban-grid-debug(@color: red) {
 
   [class*=column] {
     outline: 1px solid @color;
@@ -301,90 +301,90 @@
 }
 
 
-.bl-border-box() {
-  .bl-box-sizing(border-box);
+.oban-border-box() {
+  .oban-box-sizing(border-box);
 }
 
-.bl-pull-left() {
+.oban-pull-left() {
   float: left;
 }
 
-.bl-pull-right() {
+.oban-pull-right() {
   float: right;
 }
 
-.bl-hide() {
+.oban-hide() {
   display: none;
 }
 
-.bl-helpers() {
+.oban-helpers() {
 
   .pull-left {
-    .bl-pull-left();
+    .oban-pull-left();
   }
   .pull-right {
-    .bl-pull-right();
+    .oban-pull-right();
   }
   .hide {
-    .bl-hide();
+    .oban-hide();
   }
 
 }
 
-.bl-list-unstyled() {
+.oban-list-unstyled() {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.bl-list-inline() {
-  .bl-list-unstyled();
-  .bl-clearfix();
+.oban-list-inline() {
+  .oban-list-unstyled();
+  .oban-clearfix();
   li {
     float: left;
   }
 }
 
-.bl-lists() {
+.oban-lists() {
   .list-inline {
-    .bl-list-inline();
+    .oban-list-inline();
   }
 
   .list-unstyled {
-    .bl-list-unstyled();
+    .oban-list-unstyled();
   }
 }
 
-.bl-message(@color) {
+.oban-message(@color) {
   background: @color;
   border: 1px solid darken(@color, 10);
   color: darken(@color, 60);
   padding: 5px 10px;
 }
 
-.bl-messages() {
+.oban-messages() {
 
   .message-error {
-    .bl-message(#F2DEDE);
+    .oban-message(#F2DEDE);
   }
 
   .message-warning {
-    .bl-message(#FCF8E3);
+    .oban-message(#FCF8E3);
   }
 
   .message-success {
-    .bl-message(#DFF0D8);
+    .oban-message(#DFF0D8);
   }
 
   .message-info {
-    .bl-message(#f0f0f0);
+    .oban-message(#f0f0f0);
   }
 
 }
 
 
-.bl-modal(@width: 900px) {
-  .bl-border-box();
+.oban-modal(@width: 900px) {
+  .oban-border-box();
   position: fixed;
   padding: 20px;
   top: 100px;
@@ -402,8 +402,8 @@
   background-clip: padding-box;
 
   button.close {
-    .bl-button-reset();
-    .bl-pull-right();
+    .oban-button-reset();
+    .oban-pull-right();
     border: 1px solid #e5e5e5;
     border-radius: 5px;
     &:hover {
@@ -413,7 +413,7 @@
 
 }
 
-.bl-modal-backdrop() {
+.oban-modal-backdrop() {
 
   position: fixed;
   top: 0;
@@ -426,7 +426,7 @@
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 }
 
-.bl-normalize() {
+.oban-normalize() {
 /*! normalize.css v2.0.1 | MIT License | git.io/normalize */
 
 /* ==========================================================================
@@ -807,7 +807,7 @@ table {
 // Based on nib reset.styl (https://github.com/visionmedia/nib/blob/master/lib/nib/reset.styl)
 // Based on [Eric Meyer's reset](http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/)
 
-.bl-reset() {
+.oban-reset() {
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -816,53 +816,53 @@ table {
   dl, dt, dd, ol, ul, li,
   fieldset, form, label, legend,
   table, caption, tbody, tfoot, thead, tr, th, td {
-    .bl-reset-box-model();
-    .bl-reset-font();
+    .oban-reset-box-model();
+    .oban-reset-font();
   }
   body {
-    .bl-reset-body();
+    .oban-reset-body();
   }
   ol, ul {
     list-style: none;
   }
   table {
-    .bl-reset-table();
+    .oban-reset-table();
   }
   caption, th, td {
-    .bl-reset-table-cell();
+    .oban-reset-table-cell();
   }
   a img {
     border: none;
   }
 }
 
-.bl-nested-reset() {
+.oban-nested-reset() {
   div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
   pre, a, abbr, acronym, address, code, del, dfn, em, img,
   dl, dt, dd, ol, ul, li, fieldset, form, label,
   legend, caption, tbody, tfoot, thead, tr {
-    .bl-reset-box-model();
-    .bl-reset-font();
+    .oban-reset-box-model();
+    .oban-reset-font();
   }
   table {
-    .bl-reset-table();
+    .oban-reset-table();
   }
   caption, th, td {
-    .bl-reset-table-cell();
+    .oban-reset-table-cell();
   }
   a img {
     border: none;
   }
 }
 
-.bl-reset-box-model() {
+.oban-reset-box-model() {
   margin: 0;
   padding: 0;
   border: 0;
   outline: 0;
 }
 
-.bl-reset-font() {
+.oban-reset-font() {
   font-weight: inherit;
   font-style: inherit;
   font-family: inherit;
@@ -870,29 +870,29 @@ table {
   vertical-align: baseline;
 }
 
-.bl-reset-body() {
+.oban-reset-body() {
   line-height: 1;
   color: black;
   background: white;
 }
 
-.bl-reset-table() {
+.oban-reset-table() {
   border-collapse: separate;
   border-spacing: 0;
   vertical-align: middle;
 }
 
-.bl-reset-table-cell() {
+.oban-reset-table-cell() {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-.bl-reset-html5() {
+.oban-reset-html5() {
   article, aside, canvas, details, figcaption,
   figure, footer, header, hgroup, menu, nav,
   section, summary {
-    .bl-reset-box-model();
+    .oban-reset-box-model();
     display: block;
   }
   audio, canvas, video {
@@ -910,44 +910,44 @@ table {
 @bl-spacing-large: 40px;
 @bl-spacing-xlarge: 60px;
 
-.bl-spacing-small() {
+.oban-spacing-small() {
   margin-bottom: @bl-spacing-small;
 }
 
-.bl-spacing-medium() {
+.oban-spacing-medium() {
   margin-bottom: @bl-spacing-medium;
 }
 
-.bl-spacing-large() {
+.oban-spacing-large() {
   margin-bottom: @bl-spacing-large;
 }
 
-.bl-spacing-xlarge() {
+.oban-spacing-xlarge() {
   margin-bottom: @bl-spacing-xlarge;
 }
 
-.bl-spacing-helpers() {
+.oban-spacing-helpers() {
 
   .spacing-small {
-    .bl-spacing-small();
+    .oban-spacing-small();
   }
 
   .spacing-medium {
-    .bl-spacing-medium();
+    .oban-spacing-medium();
   }
 
   .spacing-large {
-    .bl-spacing-large();
+    .oban-spacing-large();
   }
 
   .spacing-xlarge {
-    .bl-spacing-xlarge();
+    .oban-spacing-xlarge();
   }
 
 }
 
-.bl-tabs(@bg: #f5f5f5, @borderColor: #e5e5e5, @activeBg: #fff, @borderRadius: 5px) {
-  .bl-list-inline();
+.oban-tabs(@bg: #f5f5f5, @borderColor: #e5e5e5, @activeBg: #fff, @borderRadius: 5px) {
+  .oban-list-inline();
   border-bottom: 1px solid @borderColor;
 
   li {
@@ -970,7 +970,7 @@ table {
 
 }
 
-.bl-typography(@family: ~"'Helvetica Neue', Helvetica, Arial, sans-serif", @bodySize: 14px, @lineHeight: 20px) {
+.oban-typography(@family: ~"'Helvetica Neue', Helvetica, Arial, sans-serif", @bodySize: 14px, @lineHeight: 20px) {
   .font-size(@factor: 1) {
     font-size: @bodySize * @factor;
   }

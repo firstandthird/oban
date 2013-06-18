@@ -1,4 +1,11 @@
 
+0.7.0 / 2013-06-17 
+==================
+
+  * [refactor] changed .bl prefix to .oban
+  * [refactor] renamed baseline to oban
+  * [grunt] updated to latest grunt and less
+
 0.6.2 / 2013-05-19 
 ==================
 
