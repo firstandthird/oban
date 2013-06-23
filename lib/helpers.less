@@ -15,6 +15,21 @@
   display: none;
 }
 
+.oban-size(@px) {
+  width: @px;
+  height: @px;
+}
+
+.oban-size(@width, @height) {
+  width: @width;
+  height: @height;
+}
+
+.oban-vcenter(@height) {
+  height: @height;
+  line-height: @height;
+}
+
 .oban-helpers() {
 
   .pull-left {
