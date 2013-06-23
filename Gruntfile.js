@@ -11,15 +11,29 @@ module.exports = function(grunt) {
               '//\n'
     },
     concat: {
-      options: {
-        banner: '<%= meta.banner %>'
-      },
       oban: {
+        options: {
+          banner: '<%= meta.banner %>'
+        },
         src: [
           'lib/mixins/*.less',
           'lib/*.less',
         ],
         dest: 'oban.less'
+      },
+      docs: {
+        src: [
+          'docs/intro.md',
+          'docs/grid.md',
+          'docs/bar.md',
+          'docs/buttons.md',
+          'docs/lists.md',
+          'docs/modal.md',
+          'docs/clearfix.md',
+          'docs/gradient.md',
+          'docs/arrows.md',
+        ],
+        dest: 'docs.md'
       }
     },
     less: {
@@ -35,6 +49,16 @@ module.exports = function(grunt) {
           'lib/**/*', 
           'examples/sample.less'
         ],
+        tasks: 'default'
+      },
+      docs: {
+        files: [
+          'docs/*.md'
+        ],
+        tasks: 'concat:docs'
+      },
+      grunt: {
+        files: 'Gruntfile.js',
         tasks: 'default'
       }
     },
@@ -59,5 +83,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-reloadr');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.registerTask('default', ['concat', 'less']);
-  grunt.registerTask('dev', ['connect', 'reloadr', 'watch']);
+  grunt.registerTask('dev', ['default', 'connect', 'reloadr', 'watch']);
 };

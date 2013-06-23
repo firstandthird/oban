@@ -1,24 +1,3 @@
-//  grid
-//
-//  Less Usage:
-//
-//    @import "oban";
-//    .oban-grid(); //defaults to 12 column, 20px gutter size and prefix of grid
-//    .oban-grid(16, 40px); //16 column with 40px gutter size
-//    .oban-grid(16, 40px, "row"); //16 column with 40px gutter size, set prefix to row: <div class="row12">
-//
-//  HTML Usage:
-//
-//    <div class="grid12">
-//      <div class="column2">Sidebar</div>
-//      <div class="column10">Content</div>
-//    </div>
-//
-//  Offset:
-//
-//    <div class="grid12">
-//      <div class="column2 offset2">This content will be offset to the left by 2 columns</div>
-//    </div>
 .oban-grid(@columnCount: 12, @gutterSize: 20px, @prefix: grid) {
 
   .@{prefix}@{columnCount} {
