@@ -24,6 +24,8 @@ module.exports = function(grunt) {
       docs: {
         src: [
           'docs/intro.md',
+          'docs/install.md',
+          'docs/usage.md',
           'docs/reset.md',
           'docs/clearfix.md',
           'docs/grid.md',
