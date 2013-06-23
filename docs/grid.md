@@ -4,7 +4,7 @@ The grid module is a fully responsive grid.  Each column width is set as a perce
 
 ####Less Usage
 
-```less
+```css
 //.oban-grid([columnCount], [gutterSize], [gridPrefix]);
 
 //defaults to 12 column, 20px gutter size and prefix of grid
@@ -32,7 +32,7 @@ If you want a column to be set to a fixed size no matter the parent size.
 
 ####Less Usage
 
-```less
+```css
 .grid-left-fixed {
 	.oban-grid-fixed-left([columnSize], [gutterSize]);
 }
@@ -57,7 +57,7 @@ If you want a column to be set to a fixed size no matter the parent size.
 
 If you want so assistance in figuring out your grids, there is a debug mode that will draw red lines around your grid columns.
 
-```less
+```css
 .oban-grid-debug();
 ```
 

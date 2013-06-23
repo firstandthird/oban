@@ -4,7 +4,7 @@ The gradient module gives you a simple way of adding gradients to backgrounds.  
 
 ####Less Usage
 
-```less
+```css
 .module1 {
 	.oban-gradient(@startColor: #555, @endColor: #333);
 }

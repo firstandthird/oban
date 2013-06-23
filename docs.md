@@ -8,7 +8,7 @@ The grid module is a fully responsive grid.  Each column width is set as a perce
 
 ####Less Usage
 
-```less
+```css
 //.oban-grid([columnCount], [gutterSize], [gridPrefix]);
 
 //defaults to 12 column, 20px gutter size and prefix of grid
@@ -36,7 +36,7 @@ If you want a column to be set to a fixed size no matter the parent size.
 
 ####Less Usage
 
-```less
+```css
 .grid-left-fixed {
 	.oban-grid-fixed-left([columnSize], [gutterSize]);
 }
@@ -61,7 +61,7 @@ If you want a column to be set to a fixed size no matter the parent size.
 
 If you want so assistance in figuring out your grids, there is a debug mode that will draw red lines around your grid columns.
 
-```less
+```css
 .oban-grid-debug();
 ```
 
@@ -73,7 +73,7 @@ The bar module gives you a quick way to make a nice gradient bar for your header
 
 ####Less Usage
 
-```less
+```css
 .bar {
 	.oban-bar(@bg: #333, @fg: #fff, @height: 50px, @fontSize: 20px, @degree: 10);
 }
@@ -92,7 +92,7 @@ The buttons module provides a quick way to make elegate flat and gradient button
 
 ####Less Usage
 
-```less
+```css
 .btn-flat {
 	.oban-button-flat(@bgColor: #333, @textColor: #fff, @hoverBgColor: #336699, @hoverTextColor: #fff);
 }
@@ -118,7 +118,7 @@ Oban gives you a few helpers to style your list elements
 
 ####Less Usage
 
-```less
+```css
 .list-unstyled {
 	.oban-list-unstyled();
 }
@@ -158,7 +158,7 @@ The modal module provides all of the necessary styling to show a modal.  It does
 
 ####Less Usage
 
-```less
+```css
 .model {
 	.oban-modal([width]);
 }
@@ -185,7 +185,7 @@ Oban provides a mixin for a basic clearfix for auto clearing floated elements ac
 
 ####Less Usage
 
-```less
+```css
 .clearfix {
 	.oban-clearfix();
 }
@@ -198,7 +198,7 @@ The gradient module gives you a simple way of adding gradients to backgrounds.  
 
 ####Less Usage
 
-```less
+```css
 .module1 {
 	.oban-gradient(@startColor: #555, @endColor: #333);
 }
@@ -212,7 +212,7 @@ The gradient module gives you a simple way of adding gradients to backgrounds.  
 
 The arrow mixins allow you do add ticks to any side of a block level element.  They are great for Tooltips.
 
-```less
+```css
 .arrow-top {
 	//.oban-arrow-top(@color, @size: 10px);
 	.oban-arrow-top(red);

@@ -4,7 +4,7 @@ The modal module provides all of the necessary styling to show a modal.  It does
 
 ####Less Usage
 
-```less
+```css
 .model {
 	.oban-modal([width]);
 }

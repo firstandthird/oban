@@ -4,7 +4,7 @@ Oban provides a mixin for a basic clearfix for auto clearing floated elements ac
 
 ####Less Usage
 
-```less
+```css
 .clearfix {
 	.oban-clearfix();
 }

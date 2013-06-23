@@ -2,7 +2,7 @@
 
 The arrow mixins allow you do add ticks to any side of a block level element.  They are great for Tooltips.
 
-```less
+```css
 .arrow-top {
 	//.oban-arrow-top(@color, @size: 10px);
 	.oban-arrow-top(red);

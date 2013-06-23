@@ -4,7 +4,7 @@ The bar module gives you a quick way to make a nice gradient bar for your header
 
 ####Less Usage
 
-```less
+```css
 .bar {
 	.oban-bar(@bg: #333, @fg: #fff, @height: 50px, @fontSize: 20px, @degree: 10);
 }

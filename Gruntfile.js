@@ -83,5 +83,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-reloadr');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.registerTask('default', ['concat', 'less']);
+  grunt.registerTask('docs', ['concat:docs']);
   grunt.registerTask('dev', ['default', 'connect', 'reloadr', 'watch']);
 };

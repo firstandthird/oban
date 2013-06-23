@@ -4,7 +4,7 @@ The buttons module provides a quick way to make elegate flat and gradient button
 
 ####Less Usage
 
-```less
+```css
 .btn-flat {
 	.oban-button-flat(@bgColor: #333, @textColor: #fff, @hoverBgColor: #336699, @hoverTextColor: #fff);
 }
