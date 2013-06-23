@@ -28,7 +28,7 @@ module.exports = function(grunt) {
           'docs/usage.md',
           'docs/reset.md',
           'docs/clearfix.md',
-          'docs/grid.md',
+          'docs/fluid-grid.md',
           'docs/typography.md',
           'docs/spacing.md',
           'docs/buttons.md',

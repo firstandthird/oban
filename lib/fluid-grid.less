@@ -1,34 +1,31 @@
-.oban-grid(@columnCount: 12, @gutterSize: 20px, @prefix: grid) {
+.oban-fluid-grid(@columnCount: 12, @gutterSize: 20px, @columnPrefix: column, @offsetPrefix: offset) {
 
-  .@{prefix}@{columnCount} {
+  .oban-border-box();
+  .oban-clearfix();
+  margin-left: -@gutterSize;
+
+  [class*=column] {
+    float: left;
     .oban-border-box();
-    .oban-clearfix();
-    margin-left: -@gutterSize;
-
-    [class*=column] {
-      float: left;
-      .oban-border-box();
-      padding: 0 0 0 @gutterSize;
-
-    }
-
-    .columnLoop (@index) when (@index > 0) {
-      .column@{index} { 
-        width: @index/@columnCount * 100%;
-      }
-      .offset@{index} {
-        margin-left: @index/@columnCount * 100%;
-      }
-      .columnLoop(@index - 1);
-
-    }
-    .columnLoop (0) {}
-
-    .columnLoop(@columnCount);
+    padding: 0 0 0 @gutterSize;
 
   }
 
-  .grid-pad {
+  .columnLoop (@index) when (@index > 0) {
+    .@{columnPrefix}@{index} { 
+      width: @index/@columnCount * 100%;
+    }
+    .@{offsetPrefix}@{index} {
+      margin-left: @index/@columnCount * 100%;
+    }
+    .columnLoop(@index - 1);
+
+  }
+  .columnLoop (0) {}
+
+  .columnLoop(@columnCount);
+
+  &.grid-pad {
     padding: @gutterSize;
   }
 

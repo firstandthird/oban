@@ -1,8 +1,10 @@
 @import "../oban";
 
 
-.oban-normalize();
-.oban-grid();
+.oban-reset();
+.fluid-grid12 {
+  .oban-fluid-grid();
+}
 /*.oban-grid-debug();*/
 
 
@@ -14,9 +16,7 @@
   .oban-grid-fixed-right(300px);
 }
 
-.typography {
-  .oban-typography();
-}
+.oban-typography();
 
 .oban-helpers();
 .oban-lists();
