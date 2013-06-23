@@ -9,10 +9,9 @@
 [x] lists.less
   [ ] messages.less
 [x] modal.less
-[ ] normalize.less
-[ ] reset.less
-[ ] spacing.less
-[ ] tabs.less
-[ ] typography.less
-[ ] size.less
+[x] normalize.less
+[x] reset.less
+[x] spacing.less
+[x] tabs.less
+[x] typography.less
 [ ] vendor.less

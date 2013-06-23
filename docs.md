@@ -2,6 +2,36 @@
 
 Oban is a set up Less mixins to speed up your development process.  It is an opt-in framework.  Meaning if you don't call any of the mixins, it won't add anything to your css files.  Likewise, if you just wanted to use the Grid module, you could use `.oban-grid()` in your less file and it would just include that module into your css.  Oban also tries to make no assumptions on how you name your classes.  If you want to name your classes with camelCase or under_scores, that's fine by me.
 
+##Reset
+
+Oban provides three mixins to handle resets for your site.  The first is [Eric Meyer's reset](http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/) and second is [normalize]() and the third is an html5 reset.
+
+####Less Usage
+
+```css
+//eric meyer's
+.oban-reset();
+
+//normalize
+.oban-normalize();
+
+html5
+.oban-reset-html5();
+```
+
+##Clearfix
+
+Oban provides a mixin for a basic clearfix for auto clearing floated elements across browsers.
+
+####Less Usage
+
+```css
+.clearfix {
+	.oban-clearfix();
+}
+```
+
+
 ##Grid
 
 The grid module is a fully responsive grid.  Each column width is set as a percentage, so if you container grows or shrinks, so will your columns.
@@ -67,24 +97,44 @@ If you want so assistance in figuring out your grids, there is a debug mode that
 
 [View Example]()
 
-##Bar
+##Typography
 
-The bar module gives you a quick way to make a nice gradient bar for your header or navigation.  You just pass in the background and foreground color and out comes a nice gradient bar.
+The typography mixin gives you one simple mixin to set all of your body copy and headlines across the site.  You just pass in a body size and a line height and Oban will generate the sizes and line heights for h1-h6 as well as p tags.
 
 ####Less Usage
-
 ```css
-.bar {
-	.oban-bar(@bg: #333, @fg: #fff, @height: 50px, @fontSize: 20px, @degree: 10);
-}
-```
-
-####HTML Usage
-```html
-<div class="bar"><h1 class="title">App Title</h1></div>
+.oban-typography(@family: ~"'Helvetica Neue', Helvetica, Arial, sans-serif", @bodySize: 14px, @lineHeight: 20px);
 ```
 
 [View Example]()
+
+##Spacing
+
+Most sites end up with inconsistence spacing between copy, modules, etc.  Oban gives you 4 spacing helpers to make sure that your spacing stays consistent.
+
+By default, the spacing sizes are small (10px), medium (20px), large (40px) and xlarge(60px), but these can be changed.
+
+####Setting spacing
+
+```
+@oban-spacing-small: 10px;
+@oban-spacing-medium: 20px;
+@oban-spacing-large: 40px;
+@oban-spacing-xlarge: 60px;
+```
+
+####Usage
+
+```
+.header {
+	.oban-spacing-xlarge();
+}
+
+.module1 {
+	.oban-spacing-medium();
+}
+```
+
 
 ##Buttons
 
@@ -179,18 +229,24 @@ The modal module provides all of the necessary styling to show a modal.  It does
 
 [View Example]()
 
-##Clearfix
+##Bar
 
-Oban provides a mixin for a basic clearfix for auto clearing floated elements across browsers.
+The bar module gives you a quick way to make a nice gradient bar for your header or navigation.  You just pass in the background and foreground color and out comes a nice gradient bar.
 
 ####Less Usage
 
 ```css
-.clearfix {
-	.oban-clearfix();
+.bar {
+	.oban-bar(@bg: #333, @fg: #fff, @height: 50px, @fontSize: 20px, @degree: 10);
 }
 ```
 
+####HTML Usage
+```html
+<div class="bar"><h1 class="title">App Title</h1></div>
+```
+
+[View Example]()
 
 ##Gradients
 
@@ -206,6 +262,28 @@ The gradient module gives you a simple way of adding gradients to backgrounds.  
 .module2 {
 	.oban-gradient-three-color(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f);
 }
+```
+
+##Tabs
+
+A mixin to build out basic tabs.
+
+####Less Usage
+
+```
+.oban-tabs(@bg: #f5f5f5, @borderColor: #e5e5e5, @activeBg: #fff, @borderRadius: 5px);
+```
+
+####HTML Usage
+
+```html
+<ul class="tabs">
+	<li class="active"><a href="#">Tab 1</a></li>
+	<li><a href="#">Tab 2</a></li>
+	<li><a href="#">Tab 3</a></li>
+	<li><a href="#">Tab 4</a></li>
+	<li><a href="#">Tab 5</a></li>
+</ul>
 ```
 
 ##Arrows

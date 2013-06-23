@@ -24,13 +24,17 @@ module.exports = function(grunt) {
       docs: {
         src: [
           'docs/intro.md',
+          'docs/reset.md',
+          'docs/clearfix.md',
           'docs/grid.md',
-          'docs/bar.md',
+          'docs/typography.md',
+          'docs/spacing.md',
           'docs/buttons.md',
           'docs/lists.md',
           'docs/modal.md',
-          'docs/clearfix.md',
+          'docs/bar.md',
           'docs/gradient.md',
+          'docs/tabs.md',
           'docs/arrows.md',
         ],
         dest: 'docs.md'
