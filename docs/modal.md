@@ -2,6 +2,10 @@
 
 The modal module provides all of the necessary styling to show a modal.  It doesn't provide any of the logic to show or hide the modal, but that should be trivial.  If you don't feel like writing it, the [Fidel Modal]() lib should work for you.
 
+####Example
+
+[View Example](examples/modal.html)
+
 ####Less Usage
 
 ```css
@@ -14,6 +18,8 @@ The modal module provides all of the necessary styling to show a modal.  It does
 }
 ```
 
+####HTML Usage
+
 ```html
 <div class="modal">
 	<button class="close">&times;</button>
@@ -23,4 +29,3 @@ The modal module provides all of the necessary styling to show a modal.  It does
 <div class="modal-backdrop"></div>
 ```
 
-[View Example]()

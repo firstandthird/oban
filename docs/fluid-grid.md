@@ -2,6 +2,12 @@
 
 The grid module is a fully responsive grid.  Each column width is set as a percentage, so if you container grows or shrinks, so will your columns.
 
+####Example
+
+<iframe class="embed" src="examples/fluid-grid.html"></iframe>
+
+[View Full Example](examples/fluid-grid.html)
+
 ####Less Usage
 
 ```css
@@ -82,4 +88,3 @@ If you want so assistance in figuring out your grids, there is a debug mode that
 .oban-grid-debug();
 ```
 
-[View Example]()

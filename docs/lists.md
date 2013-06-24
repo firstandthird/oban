@@ -2,6 +2,12 @@
 
 Oban gives you a few helpers to style your list elements
 
+####Example
+
+<iframe class="embed" src="examples/lists.html"></iframe>
+
+[View Full Example](examples/lists.html)
+
 ####Less Usage
 
 ```css
@@ -36,4 +42,3 @@ Oban gives you a few helpers to style your list elements
 </ul>
 ```
 
-[View Example]()

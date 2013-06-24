@@ -2,6 +2,10 @@
 
 A mixin to build out basic tabs.
 
+####Example
+
+<iframe class="embed" src="examples/tabs.html"></iframe>
+
 ####Less Usage
 
 ```

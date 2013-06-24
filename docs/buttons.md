@@ -2,6 +2,12 @@
 
 The buttons module provides a quick way to make elegate flat and gradient buttons.
 
+####Example
+
+<iframe class="embed" src="examples/buttons.html"></iframe>
+
+[View Full Example](examples/buttons.html)
+
 ####Less Usage
 
 ```css
@@ -22,4 +28,3 @@ The buttons module provides a quick way to make elegate flat and gradient button
 <a class="btn-fancy">Fancy Button on an anchor tag</a>
 ```
 
-[View Example]()

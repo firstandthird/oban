@@ -2,6 +2,14 @@
 
 The arrow mixins allow you do add ticks to any side of a block level element.  They are great for Tooltips.
 
+####Example
+
+<iframe class="embed" src="examples/arrows.html"></iframe>
+
+[View Full Example](examples/arrows.html)
+
+####Less Usage
+
 ```css
 .arrow-top {
 	//.oban-arrow-top(@color, @size: 10px);
@@ -18,11 +26,11 @@ The arrow mixins allow you do add ticks to any side of a block level element.  T
 }
 ```
 
+####HTML Usage
+
 ```html
 <div class="arrow-top">This has an up arrow</div>
 <div class="arrow-right">This has a right arrow</div>
 <div class="arrow-bottom">This has a down arrow</div>
 <div class="arrow-left">This has a left arrow</div>
 ```
-
-[View Example]()

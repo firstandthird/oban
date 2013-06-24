@@ -4,11 +4,11 @@ Oban is a set up Less mixins to speed up your development process.  It is an opt
 
 ##Installation
 
-###Manual
+####Manual
 
-[Download less file]()
+[Download less file](https://raw.github.com/jgallen23/oban/master/oban.less)
 
-###Bower
+####Bower
 
 ```
 bower install oban
@@ -55,6 +55,12 @@ Oban provides a mixin for a basic clearfix for auto clearing floated elements ac
 ##Fluid Grid
 
 The grid module is a fully responsive grid.  Each column width is set as a percentage, so if you container grows or shrinks, so will your columns.
+
+####Example
+
+<iframe class="embed" src="examples/fluid-grid.html"></iframe>
+
+[View Full Example](examples/fluid-grid.html)
 
 ####Less Usage
 
@@ -136,24 +142,27 @@ If you want so assistance in figuring out your grids, there is a debug mode that
 .oban-grid-debug();
 ```
 
-[View Example]()
 
 ##Typography
 
 The typography mixin gives you one simple mixin to set all of your body copy and headlines across the site.  You just pass in a body size and a line height and Oban will generate the sizes and line heights for h1-h6 as well as p tags.
+
+####Example
+
+<iframe class="embed" src="examples/typography.html"></iframe>
 
 ####Less Usage
 ```css
 .oban-typography(@family: ~"'Helvetica Neue', Helvetica, Arial, sans-serif", @bodySize: 14px, @lineHeight: 20px);
 ```
 
-[View Example]()
+[View Example](examples/typography.html)
 
 ##Spacing
 
 Most sites end up with inconsistence spacing between copy, modules, etc.  Oban gives you 4 spacing helpers to make sure that your spacing stays consistent.
 
-By default, the spacing sizes are small (10px), medium (20px), large (40px) and xlarge(60px), but these can be changed.
+By default, the spacing sizes are small (10px), medium (20px), large (40px) and xlarge (60px), but these can be changed.
 
 ####Setting spacing
 
@@ -181,6 +190,12 @@ By default, the spacing sizes are small (10px), medium (20px), large (40px) and 
 
 The buttons module provides a quick way to make elegate flat and gradient buttons.
 
+####Example
+
+<iframe class="embed" src="examples/buttons.html"></iframe>
+
+[View Full Example](examples/buttons.html)
+
 ####Less Usage
 
 ```css
@@ -201,11 +216,16 @@ The buttons module provides a quick way to make elegate flat and gradient button
 <a class="btn-fancy">Fancy Button on an anchor tag</a>
 ```
 
-[View Example]()
 
 ##Lists
 
 Oban gives you a few helpers to style your list elements
+
+####Example
+
+<iframe class="embed" src="examples/lists.html"></iframe>
+
+[View Full Example](examples/lists.html)
 
 ####Less Usage
 
@@ -241,11 +261,14 @@ Oban gives you a few helpers to style your list elements
 </ul>
 ```
 
-[View Example]()
 
 ##Modal
 
 The modal module provides all of the necessary styling to show a modal.  It doesn't provide any of the logic to show or hide the modal, but that should be trivial.  If you don't feel like writing it, the [Fidel Modal]() lib should work for you.
+
+####Example
+
+[View Example](examples/modal.html)
 
 ####Less Usage
 
@@ -259,6 +282,8 @@ The modal module provides all of the necessary styling to show a modal.  It does
 }
 ```
 
+####HTML Usage
+
 ```html
 <div class="modal">
 	<button class="close">&times;</button>
@@ -268,11 +293,16 @@ The modal module provides all of the necessary styling to show a modal.  It does
 <div class="modal-backdrop"></div>
 ```
 
-[View Example]()
 
 ##Bar
 
 The bar module gives you a quick way to make a nice gradient bar for your header or navigation.  You just pass in the background and foreground color and out comes a nice gradient bar.
+
+####Example
+
+<iframe class="embed" src="examples/bar.html"></iframe>
+
+[View Full Example](examples/bar.html)
 
 ####Less Usage
 
@@ -287,7 +317,6 @@ The bar module gives you a quick way to make a nice gradient bar for your header
 <div class="bar"><h1 class="title">App Title</h1></div>
 ```
 
-[View Example]()
 
 ##Gradients
 
@@ -308,6 +337,10 @@ The gradient module gives you a simple way of adding gradients to backgrounds.  
 ##Tabs
 
 A mixin to build out basic tabs.
+
+####Example
+
+<iframe class="embed" src="examples/tabs.html"></iframe>
 
 ####Less Usage
 
@@ -331,6 +364,14 @@ A mixin to build out basic tabs.
 
 The arrow mixins allow you do add ticks to any side of a block level element.  They are great for Tooltips.
 
+####Example
+
+<iframe class="embed" src="examples/arrows.html"></iframe>
+
+[View Full Example](examples/arrows.html)
+
+####Less Usage
+
 ```css
 .arrow-top {
 	//.oban-arrow-top(@color, @size: 10px);
@@ -347,11 +388,11 @@ The arrow mixins allow you do add ticks to any side of a block level element.  T
 }
 ```
 
+####HTML Usage
+
 ```html
 <div class="arrow-top">This has an up arrow</div>
 <div class="arrow-right">This has a right arrow</div>
 <div class="arrow-bottom">This has a down arrow</div>
 <div class="arrow-left">This has a left arrow</div>
 ```
-
-[View Example]()
