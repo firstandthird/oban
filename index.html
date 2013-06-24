@@ -1,1 +1,341 @@
-My Page
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <head>
+    <title>Oban - a set of Less mixins to jumpstart your project</title>
+    <link rel="stylesheet" href="public/common.css"/>
+    
+      <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-24017782-2']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+      </script>
+    
+  </head>
+  <body>
+    <div id="toc"></div>
+    
+      <a class="ribbon" data-clickd-action="Fork" href="http://github.com/jgallen23/oban"><img src="public/ribbon.png" alt="Fork me on GitHub"></a>
+    
+    <div class="wrapper">
+      
+        <a href="https://twitter.com/JGAui" class="twitter-follow-button" data-show-count="false">Follow JGAui</a>
+      
+      
+      <h1>Oban</h1>
+<p>Oban is a set up Less mixins to speed up your development process.  It is an opt-in framework.  Meaning if you don&#39;t call any of the mixins, it won&#39;t add anything to your css files.  Likewise, if you just wanted to use the Grid module, you could use <code>.oban-grid()</code> in your less file and it would just include that module into your css.  Oban also tries to make no assumptions on how you name your classes.  If you want to name your classes with camelCase or under_scores, that&#39;s fine by me.
+
+</p>
+<h2>Installation</h2>
+<h4>Manual</h4>
+<p><a href="https://raw.github.com/jgallen23/oban/master/oban.less">Download less file</a>
+
+</p>
+<h4>Bower</h4>
+<pre><code><span class="title">bower</span> install oban</code></pre>
+<h2>Usage</h2>
+<p>Using Oban is very simple, just import it at the top of your less file.
+
+</p>
+<pre><code><span class="at_rule">@<span class="keyword">import</span> <span class="string">"path/to/oban.less"</span></span>;</code></pre>
+<h2>Reset</h2>
+<p>Oban provides three mixins to handle resets for your site.  The first is <a href="http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/">Eric Meyer&#39;s reset</a> and second is <a href="">normalize</a> and the third is an html5 reset.
+
+</p>
+<h4>Less Usage</h4>
+<pre><code class="lang-css">//eric meyer&#39;s
+.oban-reset();
+
+//normalize
+.oban-normalize();
+
+html5
+.oban-reset-html5();</code></pre>
+<h2>Clearfix</h2>
+<p>Oban provides a mixin for a basic clearfix for auto clearing floated elements across browsers.
+
+</p>
+<h4>Less Usage</h4>
+<pre><code class="lang-css">.clearfix {
+    .oban-clearfix();
+}</code></pre>
+<h2>Fluid Grid</h2>
+<p>The grid module is a fully responsive grid.  Each column width is set as a percentage, so if you container grows or shrinks, so will your columns.
+
+</p>
+<h4>Example</h4>
+<iframe class="embed" src="examples/fluid-grid.html"></iframe>
+
+<p><a href="examples/fluid-grid.html">View Full Example</a>
+
+</p>
+<h4>Less Usage</h4>
+<pre><code class="lang-css">.grid {
+    .oban-fluid-grid(@columnCount: 12, @gutterSize: 20px, @columnPrefix: column, @offsetPrefix: offset);
+}
+
+//defaults to 12 column, 20px gutter size and prefix of grid
+.grid12 {
+    .oban-fluid-grid();
+}
+
+//16 column with 40px gutter size
+.grid16 {
+    .oban-fluid-grid(16, 40px);
+}
+
+//16 column with 40px gutter size, set prefix to row: &lt;div class="row12"&gt;
+.grid16 {
+    .oban-fluid-grid(16, 40px, "row");
+}</code></pre>
+<h4>HTML Usage</h4>
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"grid12"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"column2"</span>&gt;</span>Sidebar<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"column10"</span>&gt;</span>Content<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+<h3>Offsets</h3>
+<p>You can offset a column by using the offsetX class.
+
+</p>
+<h4>HTML Usage</h4>
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"grid12"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"offset1 column2"</span>&gt;</span>Sidebar<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"column9"</span>&gt;</span>Content<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+<h3>Fixed Grid Column</h3>
+<p>If you want a column to be set to a fixed size no matter the parent size.
+
+</p>
+<h4>Less Usage</h4>
+<pre><code class="lang-css">.grid-left-fixed {
+    .oban-grid-fixed-left([columnSize], [gutterSize]);
+}
+.grid-right-fixed {
+    .oban-grid-fixed-right([columnSize], [gutterSize]);
+}</code></pre>
+<h4>HTML Usage</h4>
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"grid12 grid-left-fixed"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"column-fixed"</span>&gt;</span>Sidebar<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"column12"</span>&gt;</span>Content<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"grid12 grid-right-fixed"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"column12"</span>&gt;</span>Content<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"column-fixed"</span>&gt;</span>Sidebar<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+<h3>Grid Debug</h3>
+<p>If you want so assistance in figuring out your grids, there is a debug mode that will draw red lines around your grid columns.
+
+</p>
+<pre><code class="lang-css"><span class="class">.oban-grid-debug</span>();</code></pre>
+<h2>Typography</h2>
+<p>The typography mixin gives you one simple mixin to set all of your body copy and headlines across the site.  You just pass in a body size and a line height and Oban will generate the sizes and line heights for h1-h6 as well as p tags.
+
+</p>
+<h4>Example</h4>
+<iframe class="embed" src="examples/typography.html"></iframe>
+
+<h4>Less Usage</h4>
+<pre><code class="lang-css"><span class="class">.oban-typography</span>(<span class="at_rule">@family: ~<span class="string">"'Helvetica Neue', Helvetica, Arial, sans-serif"</span>, @bodySize: <span class="number">14</span>px, @lineHeight: <span class="number">20</span>px)</span>;</code></pre>
+<p><a href="examples/typography.html">View Example</a>
+
+</p>
+<h2>Spacing</h2>
+<p>Most sites end up with inconsistence spacing between copy, modules, etc.  Oban gives you 4 spacing helpers to make sure that your spacing stays consistent.
+
+</p>
+<p>By default, the spacing sizes are small (10px), medium (20px), large (40px) and xlarge (60px), but these can be changed.
+
+</p>
+<h4>Setting spacing</h4>
+<pre><code><span class="variable">@oban</span>-spacing-<span class="symbol">small:</span> <span class="number">10</span>px;
+<span class="variable">@oban</span>-spacing-<span class="symbol">medium:</span> <span class="number">20</span>px;
+<span class="variable">@oban</span>-spacing-<span class="symbol">large:</span> <span class="number">40</span>px;
+<span class="variable">@oban</span>-spacing-<span class="symbol">xlarge:</span> <span class="number">60</span>px;</code></pre>
+<h4>Usage</h4>
+<pre><code><span class="preprocessor">.header</span> {
+    <span class="preprocessor">.oban</span>-spacing-xlarge()<span class="comment">;</span>
+}
+
+<span class="preprocessor">.module</span>1 {
+    <span class="preprocessor">.oban</span>-spacing-medium()<span class="comment">;</span>
+}</code></pre>
+<h2>Buttons</h2>
+<p>The buttons module provides a quick way to make elegate flat and gradient buttons.
+
+</p>
+<h4>Example</h4>
+<iframe class="embed" src="examples/buttons.html"></iframe>
+
+<p><a href="examples/buttons.html">View Full Example</a>
+
+</p>
+<h4>Less Usage</h4>
+<pre><code class="lang-css">.btn-flat {
+    .oban-button-flat(@bgColor: #333, @textColor: #fff, @hoverBgColor: #336699, @hoverTextColor: #fff);
+}
+
+.btn-fancy {
+    .oban-button-gradient(@bgColor: #fff, @textColor: #333, @hoverBgColor: #666, @hoverTextColor: #fff);
+}</code></pre>
+<h4>HTML Usage</h4>
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"btn-flat"</span>&gt;</span>Flat Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"btn-fancy"</span>&gt;</span>Gradient Button<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+<span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"btn-fancy"</span>&gt;</span>Fancy Button on an anchor tag<span class="tag">&lt;/<span class="title">a</span>&gt;</span></code></pre>
+<h2>Lists</h2>
+<p>Oban gives you a few helpers to style your list elements
+
+</p>
+<h4>Example</h4>
+<iframe class="embed" src="examples/lists.html"></iframe>
+
+<p><a href="examples/lists.html">View Full Example</a>
+
+</p>
+<h4>Less Usage</h4>
+<pre><code class="lang-css">.list-unstyled {
+    .oban-list-unstyled();
+}
+
+.list-inline {
+    .oban-list-inline();
+}</code></pre>
+<h4>HTML Usage</h4>
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"list-inline"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 1<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 2<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 3<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+<span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"list-unstyled"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>
+        Item 1
+        <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span>&gt;</span>SubItem 1<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span>&gt;</span>SubItem 2<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span>&gt;</span>SubItem 3<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 2<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>Item 3<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ul</span>&gt;</span></code></pre>
+<h2>Modal</h2>
+<p>The modal module provides all of the necessary styling to show a modal.  It doesn&#39;t provide any of the logic to show or hide the modal, but that should be trivial.  If you don&#39;t feel like writing it, the <a href="">Fidel Modal</a> lib should work for you.
+
+</p>
+<h4>Example</h4>
+<p><a href="examples/modal.html">View Example</a>
+
+</p>
+<h4>Less Usage</h4>
+<pre><code class="lang-css">.model {
+    .oban-modal([width]);
+}
+
+.modal-backdrop {
+    .oban-modal-backdrop();
+}</code></pre>
+<h4>HTML Usage</h4>
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modal"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"close"</span>&gt;</span>&amp;times;<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">h1</span>&gt;</span>Heading 1<span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce justo ligula, tincidunt vel congue nec, tristique vel nisl. Nullam laoreet elementum justo sed tempor. In volutpat mollis lectus non ultrices. Sed pharetra odio eget ipsum dapibus in rutrum odio facilisis. Curabitur in diam sit amet elit rutrum auctor ut sed mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris nec erat gravida leo vestibulum pharetra. Proin ut libero sed purus dictum bibendum sit amet quis ipsum. Nulla elementum sodales mauris a rutrum. Nulla porta porttitor nibh, a posuere est condimentum sit amet. Etiam viverra commodo justo ut porttitor. Nam id tristique odio.<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"modal-backdrop"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+<h2>Bar</h2>
+<p>The bar module gives you a quick way to make a nice gradient bar for your header or navigation.  You just pass in the background and foreground color and out comes a nice gradient bar.
+
+</p>
+<h4>Example</h4>
+<iframe class="embed" src="examples/bar.html"></iframe>
+
+<p><a href="examples/bar.html">View Full Example</a>
+
+</p>
+<h4>Less Usage</h4>
+<pre><code class="lang-css">.bar {
+    .oban-bar(@bg: #333, @fg: #fff, @height: 50px, @fontSize: 20px, @degree: 10);
+}</code></pre>
+<h4>HTML Usage</h4>
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"bar"</span>&gt;</span><span class="tag">&lt;<span class="title">h1</span> <span class="attribute">class</span>=<span class="value">"title"</span>&gt;</span>App Title<span class="tag">&lt;/<span class="title">h1</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+<h2>Gradients</h2>
+<p>The gradient module gives you a simple way of adding gradients to backgrounds.  It handles all of the cross browser issues and gives you a nice fallback for older browsers.
+
+</p>
+<h4>Less Usage</h4>
+<pre><code class="lang-css">.module1 {
+    .oban-gradient(@startColor: #555, @endColor: #333);
+}
+
+.module2 {
+    .oban-gradient-three-color(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f);
+}</code></pre>
+<h2>Tabs</h2>
+<p>A mixin to build out basic tabs.
+
+</p>
+<h4>Example</h4>
+<iframe class="embed" src="examples/tabs.html"></iframe>
+
+<h4>Less Usage</h4>
+<pre><code>.oban-tabs(@<span class="method">bg:</span> <span class="symbol">#f5f5f5</span>, @<span class="method">borderColor:</span> <span class="symbol">#e5e5e5</span>, @<span class="method">activeBg:</span> <span class="symbol">#fff</span>, @<span class="method">borderRadius:</span> <span class="number">5</span>px);</code></pre>
+<h4>HTML Usage</h4>
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"tabs"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"active"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab 1<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab 2<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab 3<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab 4<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Tab 5<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ul</span>&gt;</span></code></pre>
+<h2>Arrows</h2>
+<p>The arrow mixins allow you do add ticks to any side of a block level element.  They are great for Tooltips.
+
+</p>
+<h4>Example</h4>
+<iframe class="embed" src="examples/arrows.html"></iframe>
+
+<p><a href="examples/arrows.html">View Full Example</a>
+
+</p>
+<h4>Less Usage</h4>
+<pre><code class="lang-css">.arrow-top {
+    //.oban-arrow-top(@color, @size: 10px);
+    .oban-arrow-top(red);
+}
+.arrow-right {
+    .oban-arrow-right(@color, @size: 10px);
+}
+.arrow-left {
+    .oban-arrow-bottom(@color, @size: 10px);
+}
+.arrow-right {
+    .oban-arrow-left(@color, @size: 10px);
+}</code></pre>
+<h4>HTML Usage</h4>
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"arrow-top"</span>&gt;</span>This has an up arrow<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"arrow-right"</span>&gt;</span>This has a right arrow<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"arrow-bottom"</span>&gt;</span>This has a down arrow<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"arrow-left"</span>&gt;</span>This has a left arrow<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+
+      <div class="footer">
+        <div class="built-with">Built with <a href="https://github.com/jgallen23/ghpage">ghpage</a></div>
+        
+          Greg Allen
+          
+            <a href="http://twitter.com/jgaui">@jgaui</a>
+          
+        
+      </div>
+    </div>
+    <script src="public/common.js"></script>
+    
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    
+  </body>
+</html>

@@ -1,0 +1,102 @@
+@import "../oban";
+
+
+.oban-defaults();
+.fluid-grid12 {
+  .oban-fluid-grid();
+}
+/*.oban-grid-debug();*/
+
+
+.grid-fixed {
+  .oban-grid-fixed(300px);
+}
+
+.grid-fixed-right {
+  .oban-grid-fixed-right(300px);
+}
+
+.oban-typography();
+
+.oban-messages();
+
+.clearfix {
+  .oban-clearfix();
+}
+
+.reset {
+  .oban-reset();
+}
+
+//Buttons
+.btn {
+  .oban-button-reset();
+}
+
+.btn-flat {
+  .oban-button-flat();
+}
+
+.btn-gradient {
+  .oban-button-gradient();
+}
+
+//Modal
+.modal {
+  .oban-modal();
+}
+.modal-backdrop {
+  .oban-modal-backdrop();
+}
+
+//Arrows
+.arrow-top {
+  .oban-arrow-top(#ccc);
+}
+
+.arrow-right {
+  .oban-arrow-right(#ccc);
+}
+
+.arrow-left {
+  .oban-arrow-left(#ccc);
+}
+
+.arrow-bottom {
+  .oban-arrow-bottom(#ccc);
+}
+
+
+.size-test1 {
+  .oban-size(50px, 50px);
+}
+.size-test2 {
+  .oban-size(50px);
+}
+
+.bar {
+  .oban-bar(#336699, #fff, 50px, 20px, 10);
+}
+
+.tabs {
+  .oban-tabs();
+}
+
+.warning,
+.success,
+.error {
+  line-height: 30px;
+}
+
+.warning {
+  background: @bl-warning-bg;
+  color: @bl-warning;
+}
+.error {
+  background: @bl-error-bg;
+  color: @bl-error;
+}
+.success {
+  background: @bl-success-bg;
+  color: @bl-success;
+}
