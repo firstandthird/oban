@@ -34,7 +34,7 @@
   </head>
   <body>
     <div id="wrapper">
-      <div class="btns">
+      <div id="btns" class="btns">
         <button class="btn-flat" onclick="fixed()">Fixed Width</button>
         <button class="btn-flat" onclick="fluid()">Fluid</button>
       </div>
@@ -110,6 +110,10 @@
       var fixed = function() {
         document.getElementById('wrapper').style.width="900px";
       };
+      if (window.parent) {
+        document.getElementById('btns').style.display = 'none';
+        document.getElementById('wrapper').style.width="100%";
+      }
     </script>
   </body>
 </html>
