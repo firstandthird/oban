@@ -1,4 +1,20 @@
 
+0.8.0 / 2013-06-23 
+==================
+
+  * updated docs
+  * updated fluid-grid example
+  * updated examples css
+  * added .oban-defaults for set classes
+  * renamed .oban-grid to .oban-fluid-grid
+  * added install and usage docs
+  * added more docs
+  * moved size into helpers
+  * updated namespace on spacing
+  * changed docs to use css styling
+  * initial work on docs
+  * removed mixins dir
+
 0.7.0 / 2013-06-17 
 ==================
 
