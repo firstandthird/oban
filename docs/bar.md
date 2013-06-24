@@ -4,7 +4,7 @@ The bar module gives you a quick way to make a nice gradient bar for your header
 
 ####Example
 
-<iframe class="embed" src="examples/bar.html"></iframe>
+<iframe class="embed" src="examples/bar.html" height="75"></iframe>
 
 [View Full Example](examples/bar.html)
 

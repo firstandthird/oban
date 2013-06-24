@@ -4,7 +4,7 @@ A mixin to build out basic tabs.
 
 ####Example
 
-<iframe class="embed" src="examples/tabs.html"></iframe>
+<iframe class="embed" src="examples/tabs.html" height="100"></iframe>
 
 ####Less Usage
 

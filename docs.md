@@ -58,7 +58,7 @@ The grid module is a fully responsive grid.  Each column width is set as a perce
 
 ####Example
 
-<iframe class="embed" src="examples/fluid-grid.html"></iframe>
+<iframe class="embed" src="examples/fluid-grid.html" height="530"></iframe>
 
 [View Full Example](examples/fluid-grid.html)
 
@@ -192,7 +192,7 @@ The buttons module provides a quick way to make elegate flat and gradient button
 
 ####Example
 
-<iframe class="embed" src="examples/buttons.html"></iframe>
+<iframe class="embed" src="examples/buttons.html" height="250"></iframe>
 
 [View Full Example](examples/buttons.html)
 
@@ -223,7 +223,7 @@ Oban gives you a few helpers to style your list elements
 
 ####Example
 
-<iframe class="embed" src="examples/lists.html"></iframe>
+<iframe class="embed" src="examples/lists.html" height="475"></iframe>
 
 [View Full Example](examples/lists.html)
 
@@ -300,7 +300,7 @@ The bar module gives you a quick way to make a nice gradient bar for your header
 
 ####Example
 
-<iframe class="embed" src="examples/bar.html"></iframe>
+<iframe class="embed" src="examples/bar.html" height="75"></iframe>
 
 [View Full Example](examples/bar.html)
 
@@ -340,7 +340,7 @@ A mixin to build out basic tabs.
 
 ####Example
 
-<iframe class="embed" src="examples/tabs.html"></iframe>
+<iframe class="embed" src="examples/tabs.html" height="100"></iframe>
 
 ####Less Usage
 

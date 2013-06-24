@@ -4,7 +4,7 @@ The grid module is a fully responsive grid.  Each column width is set as a perce
 
 ####Example
 
-<iframe class="embed" src="examples/fluid-grid.html"></iframe>
+<iframe class="embed" src="examples/fluid-grid.html" height="530"></iframe>
 
 [View Full Example](examples/fluid-grid.html)
 

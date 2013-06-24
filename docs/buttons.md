@@ -4,7 +4,7 @@ The buttons module provides a quick way to make elegate flat and gradient button
 
 ####Example
 
-<iframe class="embed" src="examples/buttons.html"></iframe>
+<iframe class="embed" src="examples/buttons.html" height="250"></iframe>
 
 [View Full Example](examples/buttons.html)
 
