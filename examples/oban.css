@@ -1,93 +1,41 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td {
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.hide {
+  display: none;
+}
+.list-inline {
   margin: 0;
   padding: 0;
-  border: 0;
-  outline: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-family: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-body {
-  line-height: 1;
-  color: black;
-  background: white;
-}
-ol,
-ul {
   list-style: none;
 }
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-  vertical-align: middle;
+.list-inline:after {
+  content: "";
+  display: table;
+  clear: both;
 }
-caption,
-th,
-td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
+.list-inline li {
+  float: left;
 }
-a img {
-  border: none;
+.list-unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.spacing-small {
+  margin-bottom: 10px;
+}
+.spacing-medium {
+  margin-bottom: 20px;
+}
+.spacing-large {
+  margin-bottom: 40px;
+}
+.spacing-xlarge {
+  margin-bottom: 60px;
 }
 .fluid-grid12 {
   -webkit-box-sizing: border-box;
@@ -236,33 +184,6 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 20px;
 }
-.pull-left {
-  float: left;
-}
-.pull-right {
-  float: right;
-}
-.hide {
-  display: none;
-}
-.list-inline {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.list-inline:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.list-inline li {
-  float: left;
-}
-.list-unstyled {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 .message-error {
   background: #f2dede;
   border: 1px solid #e4b9b9;
@@ -291,6 +212,97 @@ body {
   content: "";
   display: table;
   clear: both;
+}
+.reset html,
+.reset body,
+.reset div,
+.reset span,
+.reset applet,
+.reset object,
+.reset iframe,
+.reset h1,
+.reset h2,
+.reset h3,
+.reset h4,
+.reset h5,
+.reset h6,
+.reset p,
+.reset blockquote,
+.reset pre,
+.reset a,
+.reset abbr,
+.reset acronym,
+.reset address,
+.reset big,
+.reset cite,
+.reset code,
+.reset del,
+.reset dfn,
+.reset em,
+.reset img,
+.reset ins,
+.reset kbd,
+.reset q,
+.reset s,
+.reset samp,
+.reset small,
+.reset strike,
+.reset strong,
+.reset sub,
+.reset sup,
+.reset tt,
+.reset var,
+.reset dl,
+.reset dt,
+.reset dd,
+.reset ol,
+.reset ul,
+.reset li,
+.reset fieldset,
+.reset form,
+.reset label,
+.reset legend,
+.reset table,
+.reset caption,
+.reset tbody,
+.reset tfoot,
+.reset thead,
+.reset tr,
+.reset th,
+.reset td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+.reset body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+.reset ol,
+.reset ul {
+  list-style: none;
+}
+.reset table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+.reset caption,
+.reset th,
+.reset td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+.reset a img {
+  border: none;
 }
 .btn {
   cursor: pointer;
@@ -476,97 +488,6 @@ body {
   border-right: 10px solid transparent;
   border-top: 10px solid #cccccc;
 }
-.reset html,
-.reset body,
-.reset div,
-.reset span,
-.reset applet,
-.reset object,
-.reset iframe,
-.reset h1,
-.reset h2,
-.reset h3,
-.reset h4,
-.reset h5,
-.reset h6,
-.reset p,
-.reset blockquote,
-.reset pre,
-.reset a,
-.reset abbr,
-.reset acronym,
-.reset address,
-.reset big,
-.reset cite,
-.reset code,
-.reset del,
-.reset dfn,
-.reset em,
-.reset img,
-.reset ins,
-.reset kbd,
-.reset q,
-.reset s,
-.reset samp,
-.reset small,
-.reset strike,
-.reset strong,
-.reset sub,
-.reset sup,
-.reset tt,
-.reset var,
-.reset dl,
-.reset dt,
-.reset dd,
-.reset ol,
-.reset ul,
-.reset li,
-.reset fieldset,
-.reset form,
-.reset label,
-.reset legend,
-.reset table,
-.reset caption,
-.reset tbody,
-.reset tfoot,
-.reset thead,
-.reset tr,
-.reset th,
-.reset td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-family: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-.reset body {
-  line-height: 1;
-  color: black;
-  background: white;
-}
-.reset ol,
-.reset ul {
-  list-style: none;
-}
-.reset table {
-  border-collapse: separate;
-  border-spacing: 0;
-  vertical-align: middle;
-}
-.reset caption,
-.reset th,
-.reset td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-.reset a img {
-  border: none;
-}
 .size-test1 {
   width: 50px;
   height: 50px;
@@ -574,109 +495,6 @@ body {
 .size-test2 {
   width: 50px;
   height: 50px;
-}
-.spacing html,
-.spacing body,
-.spacing div,
-.spacing span,
-.spacing applet,
-.spacing object,
-.spacing iframe,
-.spacing h1,
-.spacing h2,
-.spacing h3,
-.spacing h4,
-.spacing h5,
-.spacing h6,
-.spacing p,
-.spacing blockquote,
-.spacing pre,
-.spacing a,
-.spacing abbr,
-.spacing acronym,
-.spacing address,
-.spacing big,
-.spacing cite,
-.spacing code,
-.spacing del,
-.spacing dfn,
-.spacing em,
-.spacing img,
-.spacing ins,
-.spacing kbd,
-.spacing q,
-.spacing s,
-.spacing samp,
-.spacing small,
-.spacing strike,
-.spacing strong,
-.spacing sub,
-.spacing sup,
-.spacing tt,
-.spacing var,
-.spacing dl,
-.spacing dt,
-.spacing dd,
-.spacing ol,
-.spacing ul,
-.spacing li,
-.spacing fieldset,
-.spacing form,
-.spacing label,
-.spacing legend,
-.spacing table,
-.spacing caption,
-.spacing tbody,
-.spacing tfoot,
-.spacing thead,
-.spacing tr,
-.spacing th,
-.spacing td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-family: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-.spacing body {
-  line-height: 1;
-  color: black;
-  background: white;
-}
-.spacing ol,
-.spacing ul {
-  list-style: none;
-}
-.spacing table {
-  border-collapse: separate;
-  border-spacing: 0;
-  vertical-align: middle;
-}
-.spacing caption,
-.spacing th,
-.spacing td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-.spacing a img {
-  border: none;
-}
-.spacing .spacing-small {
-  margin-bottom: 10px;
-}
-.spacing .spacing-medium {
-  margin-bottom: 20px;
-}
-.spacing .spacing-large {
-  margin-bottom: 40px;
-}
-.spacing .spacing-xlarge {
-  margin-bottom: 60px;
 }
 .bar {
   background-color: #366ba1;

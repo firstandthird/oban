@@ -1,7 +1,7 @@
 @import "../oban";
 
 
-.oban-reset();
+.oban-defaults();
 .fluid-grid12 {
   .oban-fluid-grid();
 }
@@ -18,12 +18,14 @@
 
 .oban-typography();
 
-.oban-helpers();
-.oban-lists();
 .oban-messages();
 
 .clearfix {
   .oban-clearfix();
+}
+
+.reset {
+  .oban-reset();
 }
 
 //Buttons
@@ -64,20 +66,12 @@
   .oban-arrow-bottom(#ccc);
 }
 
-.reset {
-  .oban-reset();
-}
 
 .size-test1 {
   .oban-size(50px, 50px);
 }
 .size-test2 {
   .oban-size(50px);
-}
-
-.spacing {
-  .oban-reset();
-  .oban-spacing-helpers();
 }
 
 .bar {
