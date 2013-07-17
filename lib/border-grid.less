@@ -1,25 +1,18 @@
-.oban-border-grid(@border-color) {
-
+.oban-border-grid-left(@border-color, @gutterSize: 20px) {
   [class*=column] {
     position: relative;
   }
-  [class*=column]::before {
+  [class*=column]:before {
     position: absolute;
-    background-color: @border-color;
-    content: '';
-  }
-}
-
-.oban-border-grid-left(@border-color, @gutterSize: 20px) {
-  .oban-border-grid(@border-color);
-
-  [class*=column]::before {
     left: ( @gutterSize - 1 ) / 2;
     width: 1px;
     height: 100%;
+    background-color: @border-color;
+    content: '';
   }
-  [class*=column]:first-child::before {
+  [class*=column]:first-child:before {
     height: 0;
   }
 }
+
 
