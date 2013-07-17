@@ -41,7 +41,6 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  position: relative;
   margin-left: -20px;
 }
 .fluid-grid12:after {
@@ -147,15 +146,6 @@
 }
 .grid-border-left [class*=column]:first-child::before {
   height: 0;
-}
-.grid-border-bottom::before {
-  position: absolute;
-  right: 0;
-  bottom: -1px;
-  width: 97.8% ;
-  height: 1px;
-  background-color: #000000;
-  content: '';
 }
 .grid-fixed {
   padding-left: 320px;
