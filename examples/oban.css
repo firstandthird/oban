@@ -41,6 +41,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  position: relative;
   margin-left: -20px;
 }
 .fluid-grid12:after {
@@ -131,6 +132,31 @@
   padding: 20px;
 }
 /*.oban-grid-debug();*/
+.grid-border-left [class*=column] {
+  position: relative;
+}
+.grid-border-left [class*=column]::before {
+  position: absolute;
+  background-color: #000000;
+  content: '';
+}
+.grid-border-left [class*=column]::before {
+  left: 9.5px;
+  width: 1px;
+  height: 100%;
+}
+.grid-border-left [class*=column]:first-child::before {
+  height: 0;
+}
+.grid-border-bottom::before {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  width: 97.8% ;
+  height: 1px;
+  background-color: #000000;
+  content: '';
+}
 .grid-fixed {
   padding-left: 320px;
 }
