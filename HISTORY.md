@@ -1,4 +1,15 @@
 
+0.9.0 / 2013-07-18 
+==================
+
+  * [grid] changed to oban-grid-border and oban-grid-fluid
+  * Merge pull request #1 from apermanentwreck/feature/border-grid-mixin
+  * MINOR - converted to 1 mixin; changed to ie8 support psuedo-element syntax
+  * MINOR - removed the border bottom
+  * MINOR - added the border grid mixin for left side border
+  * Update package.json
+  * updated docs
+
 0.8.0 / 2013-06-23 
 ==================
 
