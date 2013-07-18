@@ -131,10 +131,10 @@
   padding: 20px;
 }
 /*.oban-grid-debug();*/
-.grid-border-left [class*=column] {
+.grid-border [class*=column] {
   position: relative;
 }
-.grid-border-left [class*=column]:before {
+.grid-border [class*=column]:before {
   position: absolute;
   left: 9.5px;
   width: 1px;
@@ -142,7 +142,7 @@
   background-color: #000000;
   content: '';
 }
-.grid-border-left [class*=column]:first-child:before {
+.grid-border [class*=column]:first-child:before {
   height: 0;
 }
 .grid-fixed {
