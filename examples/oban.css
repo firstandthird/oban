@@ -131,6 +131,20 @@
   padding: 20px;
 }
 /*.oban-grid-debug();*/
+.grid-border-left [class*=column] {
+  position: relative;
+}
+.grid-border-left [class*=column]:before {
+  position: absolute;
+  left: 9.5px;
+  width: 1px;
+  height: 100%;
+  background-color: #000000;
+  content: '';
+}
+.grid-border-left [class*=column]:first-child:before {
+  height: 0;
+}
 .grid-fixed {
   padding-left: 320px;
 }

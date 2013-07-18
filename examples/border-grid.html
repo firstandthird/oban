@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Border Grid</title>
+    <link rel="stylesheet" href="oban.css"/>
+    <style>
+      .fluid-grid12 {
+        margin-top: 20px;
+        padding-bottom: 20px;
+      }
+      div[class^=column] .name { 
+        padding: 10px 0;
+        background: #ddd;
+        border-radius: 5px;
+        text-align: center;
+      }
+      div[class^=column] div[class^=column] .name {
+        background: #bbb;
+      }
+      #wrapper {
+        width: 900px;
+        padding: 10px 0;
+        margin: 0 auto;
+        background: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+        <div class="fluid-grid12 grid-border-left">
+            <div class="column1"><div class="name">1</div></div>
+            <div class="column1"><div class="name">2</div></div>
+            <div class="column1"><div class="name">3</div></div>
+            <div class="column1"><div class="name">4</div></div>
+            <div class="column1"><div class="name">5</div></div>
+            <div class="column1"><div class="name">6</div></div>
+            <div class="column1"><div class="name">7</div></div>
+            <div class="column1"><div class="name">8</div></div>
+            <div class="column1"><div class="name">9</div></div>
+            <div class="column1"><div class="name">10</div></div>
+            <div class="column1"><div class="name">11</div></div>
+            <div class="column1"><div class="name">12</div></div>
+        </div>
+        <div class="fluid-grid12 grid-border-left">
+            <div class="column4"><div class="name">4</div></div>
+            <div class="column4"><div class="name">4</div></div>
+            <div class="column4"><div class="name">4</div></div>
+        </div>
+        <div class="fluid-grid12 grid-border-left">
+            <div class="column2"><div class="name">2 Columns</div></div>
+            <div class="column10 grid-border-left">
+              <div class="name">
+                10 Columns
+                <div class="fluid-grid12">
+                  <div class="column6"><div class="name">6 Columns</div></div>
+                  <div class="column6"><div class="name">6 Columns</div></div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="fluid-grid12">
+            <div class="column4 offset2"><div class="name">4 Columns, Offset 2</div></div>
+        </div>
+    </div>
+  </body>
+</html>

@@ -83,6 +83,25 @@
 
 }
 
+.oban-border-grid-left(@border-color, @gutterSize: 20px) {
+  [class*=column] {
+    position: relative;
+  }
+  [class*=column]:before {
+    position: absolute;
+    left: ( @gutterSize - 1 ) / 2;
+    width: 1px;
+    height: 100%;
+    background-color: @border-color;
+    content: '';
+  }
+  [class*=column]:first-child:before {
+    height: 0;
+  }
+}
+
+
+
 
 .oban-button-reset() {
   cursor: pointer;
