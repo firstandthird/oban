@@ -1,4 +1,10 @@
 
+0.9.1 / 2013-07-18 
+==================
+
+  * Merge pull request #2 from apermanentwreck/feature/arrows-location
+  * [arrows] - updated arrows mixin to pass in location
+
 0.9.0 / 2013-07-18 
 ==================
 
