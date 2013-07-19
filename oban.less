@@ -16,11 +16,11 @@
   }
 }
 
-.oban-arrow-top(@color, @size: 10px) {
+.oban-arrow-top(@color, @size: 10px, @location: 50%) {
   .oban-arrow-base();
 
   &:after {
-    left: 50%;
+    left: @location;
     margin-left: -@size;
     top: -@size;
     border-left: @size solid transparent;
@@ -29,11 +29,11 @@
   }
 }
 
-.oban-arrow-right(@color, @size: 10px) {
+.oban-arrow-right(@color, @size: 10px, @location: 50%) {
   .oban-arrow-base();
 
   &:after {
-    top: 50%;
+    top: @location;
     margin-top: -@size;
     right: -@size;
     border-top: @size solid transparent;
@@ -42,11 +42,11 @@
   }
 }
 
-.oban-arrow-left(@color, @size: 10px) {
+.oban-arrow-left(@color, @size: 10px, @location: 50%) {
   .oban-arrow-base();
 
   &:after {
-    top: 50%;
+    top: @location;
     margin-top: -@size;
     left: -@size;
     border-top: @size solid transparent;
@@ -55,11 +55,11 @@
   }
 }
 
-.oban-arrow-bottom(@color, @size: 10px) {
+.oban-arrow-bottom(@color, @size: 10px, @location: 50%) {
   .oban-arrow-base();
 
   &:after {
-    left: 50%;
+    left: @location;
     margin-left: -@size;
     bottom: -@size;
     border-left: @size solid transparent;
