@@ -159,6 +159,18 @@
   margin-right: -320px;
   width: 320px;
 }
+.grid-fixed-both {
+  padding-left: 220px;
+  padding-right: 220px;
+}
+.grid-fixed-both .column-left {
+  margin-left: -220px;
+  width: 220px;
+}
+.grid-fixed-both .column-right {
+  margin-right: -220px;
+  width: 220px;
+}
 h1,
 h2,
 h3,

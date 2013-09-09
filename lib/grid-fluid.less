@@ -31,27 +31,27 @@
 
 }
 
-.oban-grid-fixed(@columnSize: 100px, @gutterSize: 20px) {
+.oban-grid-fixed(@columnSize: 100px, @gutterSize: 20px, @className: column-fixed) {
 
   @size: @columnSize + @gutterSize;
   padding-left: @size;
 
-  .column-fixed {
+  .@{className} {
     margin-left: -@size;
     width: @size;
   }
 }
 
-.oban-grid-fixed-left(@columnSize, @gutterSize) {
-  .oban-grid-fixed(@columnSize, @gutterSize);
+.oban-grid-fixed-left(@columnSize, @gutterSize: 20px, @className: column-fixed) {
+  .oban-grid-fixed(@columnSize, @gutterSize, @className);
 }
 
-.oban-grid-fixed-right(@columnSize: 100px, @gutterSize: 20px) {
+.oban-grid-fixed-right(@columnSize: 100px, @gutterSize: 20px, @className: column-fixed) {
 
   @size: @columnSize + @gutterSize;
   padding-right: @size;
 
-  .column-fixed {
+  .@{className} {
     margin-right: -@size;
     width: @size;
   }
