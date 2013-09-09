@@ -1,4 +1,9 @@
 
+0.9.2 / 2013-09-08 
+==================
+
+  * [grid] added support for naming the fixed columns to allow for fixed on both sides
+
 0.9.1 / 2013-07-18 
 ==================
 
