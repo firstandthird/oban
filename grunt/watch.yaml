@@ -1,10 +1,15 @@
 options:
   livereload: true
-js:
+less:
+  options:
+    livereload: false
   files:
     - 'lib/**/*'
     - 'examples/sample.less'
   tasks: 'default'
+examples:
+  files:
+    - 'examples/*'
 docs:
   files:
     - 'docs/*.md'
