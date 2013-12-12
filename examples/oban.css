@@ -586,3 +586,59 @@ body {
   background: #dff0d8;
   color: #3d6c2a;
 }
+.form {
+  color: #333333;
+}
+.form header {
+  font-size: 1.5em;
+  margin: 0 0 5px 0;
+}
+.form p {
+  font-size: 0.9em;
+  color: #999999;
+  margin: 0;
+}
+.form fieldset {
+  border: 0;
+  margin: 10px 0;
+  padding: 0;
+}
+.form fieldset p {
+  font-size: 0.8em;
+  margin-top: 2px;
+}
+.form fieldset label {
+  margin: 0 0 2px 0;
+}
+.form label {
+  display: block;
+  font-size: 0.95em;
+  font-weight: bold;
+  margin: 0;
+}
+.form label span {
+  color: #cf5f5f;
+}
+.form label + fieldset {
+  margin-top: 5px;
+}
+.form input[type=checkbox] + label,
+.form input[type=radio] + label {
+  display: inline;
+  font-weight: normal;
+}
+.form input[type=text],
+.form textarea {
+  font-size: 1em;
+  border: 1px solid #999999;
+  border-radius: 3px;
+  background: #fcfcfc;
+  padding: 5px;
+  margin: 0;
+}
+.form input[type=text],
+.form textarea,
+.form select {
+  width: 80%;
+  display: block;
+}

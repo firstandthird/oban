@@ -1,0 +1,86 @@
+.oban-form(
+  @color: #333;
+  @copyColor: lighten(@color, 40);
+  @requiredColor: #cf5f5f;
+
+  @headerSize: 1.5em;
+  @labelSize: .95em;
+  @copySize: .80em;
+  @mainCopySize: .9em;
+  @inputFontSize: 1em;
+
+  @labelFontWeight: bold;
+
+  @inputWidth: 80%;
+  @inputBorder: lighten(#000, 60);
+  @inputBg: #fcfcfc;
+  @inputBorderRadius: 3px;
+) {
+
+  color: @color;
+  header {
+    font-size: @headerSize;
+    margin: 0 0 5px 0;
+  }
+
+  p {
+    font-size: @mainCopySize;
+    color: @copyColor;
+    margin: 0;
+  }
+
+  fieldset {
+    border: 0;
+    margin: 10px 0;
+    padding: 0;
+
+    p {
+      font-size: @copySize;
+      margin-top: 2px;
+    }
+
+    label {
+      margin: 0 0 2px 0;
+    }
+  }
+
+  label {
+    display: block;
+    font-size: @labelSize;
+    font-weight: @labelFontWeight;
+    margin: 0;
+
+    span {
+      color: @requiredColor;
+    }
+
+    & + fieldset {
+      margin-top: 5px;
+    }
+  }
+
+  input[type=checkbox] + label,
+  input[type=radio] + label {
+    display: inline;
+    font-weight: normal;
+  }
+
+  input[type=text],
+  textarea {
+    font-size: @inputFontSize;
+    border: 1px solid @inputBorder;
+    border-radius: @inputBorderRadius;
+    background: @inputBg;
+    padding: 5px;
+    margin: 0;
+  }
+
+  input[type=text],
+  textarea,
+  select {
+    width: @inputWidth;
+    display: block;
+  }
+
+
+}
