@@ -1,0 +1,16 @@
+options:
+  livereload: true
+js:
+  files:
+    - 'lib/**/*'
+    - 'examples/sample.less'
+  tasks: 'default'
+docs:
+  files:
+    - 'docs/*.md'
+  tasks: 'concat:docs'
+grunt:
+  files: 
+    - 'Gruntfile.js'
+    - 'grunt/*'
+  tasks: 'default'

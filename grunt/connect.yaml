@@ -1,0 +1,6 @@
+examples:
+  options:
+    base: 'examples'
+    directory: 'examples'
+    hostname: '*'
+    livereload: true

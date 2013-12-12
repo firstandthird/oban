@@ -1,0 +1,25 @@
+oban:
+  options:
+    banner: '<%= meta.banner %>'
+  src:
+    - 'lib/mixins/*.less'
+    - 'lib/*.less'
+  dest: 'oban.less'
+docs:
+  src:
+    - 'docs/intro.md'
+    - 'docs/install.md'
+    - 'docs/usage.md'
+    - 'docs/reset.md'
+    - 'docs/clearfix.md'
+    - 'docs/fluid-grid.md'
+    - 'docs/typography.md'
+    - 'docs/spacing.md'
+    - 'docs/buttons.md'
+    - 'docs/lists.md'
+    - 'docs/modal.md'
+    - 'docs/bar.md'
+    - 'docs/gradient.md'
+    - 'docs/tabs.md'
+    - 'docs/arrows.md'
+  dest: 'docs.md'

@@ -1,0 +1,9 @@
+default:
+  - 'concat'
+  - 'less'
+docs:
+  - 'concat:docs'
+dev:
+  - 'default'
+  - 'connect'
+  - 'watch'
