@@ -1,4 +1,11 @@
 
+0.10.0 / 2013-12-13 
+==================
+
+  * initial work on form mixin.  #7
+  * tweaked watch grunt task
+  * updated build scripts to use load-grunt-config.  fixes #10
+
 0.9.2 / 2013-09-08 
 ==================
 
