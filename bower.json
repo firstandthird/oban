@@ -5,5 +5,15 @@
   "description": "a set of less mixins that give you a starting point when starting a new project",
   "homepage": "https://github.com/jgallen23/oban",
   "license": "MIT",
-  "copyright": "JGA"
+  "copyright": "JGA",
+  "ignore": [
+    ".gitignore",
+    "package.json",
+    "docs",
+    "docs.md",
+    "examples",
+    "grunt",
+    "lib",
+    "Gruntfile.js"
+  ]
 }
