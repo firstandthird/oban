@@ -1,3 +1,13 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .pull-left {
   float: left;
 }
@@ -628,6 +638,9 @@ body {
   font-weight: normal;
 }
 .form input[type=text],
+.form input[type=password],
+.form input[type=email],
+.form input[type=url],
 .form textarea {
   font-size: 1em;
   border: 1px solid #999999;
@@ -637,6 +650,9 @@ body {
   margin: 0;
 }
 .form input[type=text],
+.form input[type=password],
+.form input[type=email],
+.form input[type=url],
 .form textarea,
 .form select {
   width: 80%;
