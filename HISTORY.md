@@ -1,4 +1,13 @@
 
+0.11.0 / 2013-12-31 
+===================
+
+  * chore(grunt): only watch html and css files
+  * refactor(form): updated the markup for forms
+  * feat(form): added support for password, email and url input fields
+  * added clearfix to defaults
+  * added border-box to defaults
+
 0.10.1 / 2013-12-18 
 ==================
 
