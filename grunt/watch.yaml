@@ -9,7 +9,8 @@ less:
   tasks: 'default'
 examples:
   files:
-    - 'examples/*'
+    - 'examples/*.html'
+    - 'examples/*.css'
 docs:
   files:
     - 'docs/*.md'
