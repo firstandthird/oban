@@ -15,48 +15,73 @@
   @inputBorder: lighten(#000, 60);
   @inputBg: #fcfcfc;
   @inputBorderRadius: 3px;
+
+  @spacingHeadline: 15px;
+  @spacingSections: 25px;
+  @spacingFields: 10px;
+  @spacingLabels: 3px;
 ) {
 
   color: @color;
-  header {
+
+  //headline
+  legend {
     font-size: @headerSize;
-    margin: 0 0 5px 0;
+    margin: 0 0 @spacingHeadline 0;
   }
 
+  //note under headline
   p {
     font-size: @mainCopySize;
     color: @copyColor;
     margin: 0;
   }
 
+  //section
   fieldset {
     border: 0;
-    margin: 10px 0;
+    margin: 0;
     padding: 0;
 
-    p {
-      font-size: @copySize;
-      margin-top: 2px;
-    }
-
-    label {
-      margin: 0 0 2px 0;
+    //sections on top of eachother
+    & + fieldset {
+      margin-top: @spacingSections;
     }
   }
 
+  //field group
+  fieldset > div {
+    margin: @spacingFields 0;
+
+    //field label
+    label {
+      margin: 0 0 @spacingLabels 0;
+    }
+
+    //field note
+    p {
+      font-size: @copySize;
+      margin-top: @spacingLabels;
+    }
+  }
+
+  //nested headline
+  div + legend,
   label {
     display: block;
     font-size: @labelSize;
     font-weight: @labelFontWeight;
     margin: 0;
+  }
 
+  label {
     span {
       color: @requiredColor;
     }
+  }
 
-    & + fieldset {
-      margin-top: 5px;
-    }
+  div + legend + div {
+    margin-top: @spacingLabels;
   }
 
   input[type=checkbox] + label,

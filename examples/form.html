@@ -7,55 +7,60 @@
   </head>
   <body>
     <form class="form">
-      <header>Section</header>
-      <p>Copy for Section</p>
       <fieldset>
-        <label for="text">Label <span>*</span></label>
-        <input type="text" id="text"/>
-        <p>Field Copy</p>
+        <legend>Section 1 Header</legend>
+        <p>Copy for Section</p>
+        <div>
+          <label for="text">Label <span>*</span></label>
+          <input type="text" id="text"/>
+          <p>Field Copy</p>
+        </div>
+        <div>
+          <label for="text">Password <span>*</span></label>
+          <input type="password" id="text"/>
+          <p>Field Copy</p>
+        </div>
+        <div>
+          <label for="dropdown">Dropdown</label>
+          <select id="dropdown">
+            <option>Please Select...</option>
+            <option>Option 1</option>
+          </select>
+          <p>Field Copy</p>
+        </div>
       </fieldset>
       <fieldset>
-        <label for="text">Password <span>*</span></label>
-        <input type="password" id="text"/>
-        <p>Field Copy</p>
-      </fieldset>
-      <fieldset>
-        <label for="dropdown">Dropdown</label>
-        <select id="dropdown">
-          <option>Please Select...</option>
-          <option>Option 1</option>
-        </select>
-        <p>Field Copy</p>
-      </fieldset>
-      <fieldset>
-        <label for="textarea">Textarea</label>
-        <textarea for="textarea"></textarea>
-        <p>Field Copy</p>
-      </fieldset>
-      <label>Radio buttons</label>
-      <fieldset>
-        <input id="radio1" type="radio" name="radio"/>
-        <label for="radio1">Radio</label>
-      </fieldset>
-      <fieldset>
-        <input id="radio2" type="radio" name="radio"/>
-        <label for="radio2">Radio</label>
-        <p>Field Copy</p>
-      </fieldset>
-      <label>Checkboxes</label>
-      <fieldset>
-        <input id="cbx" type="checkbox"/>
-        <label for="cbx">This is a checkbox</label>
-        <p>Field Copy</p>
-      </fieldset>
-      <fieldset>
-        <input id="cbx" type="checkbox"/>
-        <label for="cbx">This is a checkbox</label>
-        <p>Field Copy</p>
-      </fieldset>
-      <fieldset>
-        <button type="submit">Submit</button>
-        <button type="button">Cancel</button>
+        <legend>Section 2 Header</legend>
+        <div>
+          <label for="textarea">Textarea</label>
+          <textarea for="textarea"></textarea>
+          <p>Field Copy</p>
+        </div>
+        <legend>Radio buttons</legend>
+        <div>
+          <input id="radio1" type="radio" name="radio"/>
+          <label for="radio1">Radio</label>
+        </div>
+        <div>
+          <input id="radio2" type="radio" name="radio"/>
+          <label for="radio2">Radio</label>
+          <p>Field Copy</p>
+        </div>
+        <legend>Checkboxes</legend>
+        <div>
+          <input id="cbx" type="checkbox"/>
+          <label for="cbx">This is a checkbox</label>
+          <p>Field Copy</p>
+        </div>
+        <div>
+          <input id="cbx" type="checkbox"/>
+          <label for="cbx">This is a checkbox</label>
+          <p>Field Copy</p>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+          <button type="button">Cancel</button>
+        </div>
       </fieldset>
     </form>
   </body>

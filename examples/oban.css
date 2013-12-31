@@ -599,9 +599,9 @@ body {
 .form {
   color: #333333;
 }
-.form header {
+.form legend {
   font-size: 1.5em;
-  margin: 0 0 5px 0;
+  margin: 0 0 15px 0;
 }
 .form p {
   font-size: 0.9em;
@@ -610,16 +610,23 @@ body {
 }
 .form fieldset {
   border: 0;
-  margin: 10px 0;
+  margin: 0;
   padding: 0;
 }
-.form fieldset p {
+.form fieldset + fieldset {
+  margin-top: 25px;
+}
+.form fieldset > div {
+  margin: 10px 0;
+}
+.form fieldset > div label {
+  margin: 0 0 3px 0;
+}
+.form fieldset > div p {
   font-size: 0.8em;
-  margin-top: 2px;
+  margin-top: 3px;
 }
-.form fieldset label {
-  margin: 0 0 2px 0;
-}
+.form div + legend,
 .form label {
   display: block;
   font-size: 0.95em;
@@ -629,8 +636,8 @@ body {
 .form label span {
   color: #cf5f5f;
 }
-.form label + fieldset {
-  margin-top: 5px;
+.form div + legend + div {
+  margin-top: 3px;
 }
 .form input[type=checkbox] + label,
 .form input[type=radio] + label {
