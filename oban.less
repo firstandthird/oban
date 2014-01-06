@@ -1,9 +1,9 @@
 
 //
 // oban - a set of less mixins that give you a starting point when starting a new project
-// v0.11.0
+// v0.12.0
 // https://github.com/jgallen23/oban
-// copyright JGA 2013
+// copyright JGA 2014
 // MIT License
 //
 .oban-arrow-base() {
@@ -208,7 +208,7 @@
 
 .oban-form(
   @color: #333;
-  @copyColor: lighten(@color, 40);
+  @copyColor: lighten(@color, 30);
   @requiredColor: #cf5f5f;
 
   @headerSize: 1.5em;
@@ -233,16 +233,21 @@
   color: @color;
 
   //headline
-  legend {
+  p {
     font-size: @headerSize;
     margin: 0 0 @spacingHeadline 0;
   }
 
   //note under headline
-  p {
+  div + p,
+  p + p {
     font-size: @mainCopySize;
-    color: @copyColor;
     margin: 0;
+  }
+
+  div > p,
+  p + p {
+    color: @copyColor;
   }
 
   //section
@@ -274,7 +279,7 @@
   }
 
   //nested headline
-  div + legend,
+  div + p,
   label {
     display: block;
     font-size: @labelSize;
@@ -288,7 +293,7 @@
     }
   }
 
-  div + legend + div {
+  div + p + div {
     margin-top: @spacingLabels;
   }
 
