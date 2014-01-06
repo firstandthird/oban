@@ -599,14 +599,18 @@ body {
 .form {
   color: #333333;
 }
-.form legend {
+.form p {
   font-size: 1.5em;
   margin: 0 0 15px 0;
 }
-.form p {
+.form div + p,
+.form p + p {
   font-size: 0.9em;
-  color: #999999;
   margin: 0;
+}
+.form div > p,
+.form p + p {
+  color: #808080;
 }
 .form fieldset {
   border: 0;
@@ -626,7 +630,7 @@ body {
   font-size: 0.8em;
   margin-top: 3px;
 }
-.form div + legend,
+.form div + p,
 .form label {
   display: block;
   font-size: 0.95em;
@@ -636,7 +640,7 @@ body {
 .form label span {
   color: #cf5f5f;
 }
-.form div + legend + div {
+.form div + p + div {
   margin-top: 3px;
 }
 .form input[type=checkbox] + label,
