@@ -599,7 +599,7 @@ body {
 .form {
   color: #333333;
 }
-.form p {
+.form fieldset > p {
   font-size: 1.5em;
   margin: 0 0 15px 0;
 }
@@ -626,7 +626,7 @@ body {
 .form fieldset > div label {
   margin: 0 0 3px 0;
 }
-.form fieldset > div p {
+.form fieldset > div > p {
   font-size: 0.8em;
   margin-top: 3px;
 }
@@ -648,11 +648,11 @@ body {
   display: inline;
   font-weight: normal;
 }
-.form input[type=text],
-.form input[type=password],
-.form input[type=email],
-.form input[type=url],
-.form textarea {
+.form fieldset > div > input[type=text],
+.form fieldset > div > input[type=password],
+.form fieldset > div > input[type=email],
+.form fieldset > div > input[type=url],
+.form fieldset > div > textarea {
   font-size: 1em;
   border: 1px solid #999999;
   border-radius: 3px;
@@ -660,12 +660,12 @@ body {
   padding: 5px;
   margin: 0;
 }
-.form input[type=text],
-.form input[type=password],
-.form input[type=email],
-.form input[type=url],
-.form textarea,
-.form select {
+.form fieldset > div > input[type=text],
+.form fieldset > div > input[type=password],
+.form fieldset > div > input[type=email],
+.form fieldset > div > input[type=url],
+.form fieldset > div > textarea,
+.form fieldset > div > select {
   width: 80%;
   display: block;
 }
