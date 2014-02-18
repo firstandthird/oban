@@ -141,3 +141,26 @@
   }
 }
 
+.mobile {
+  .block {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .block span {
+    display: block;
+    padding: 10px;
+  }
+
+  .visible [class*=show],
+  .hidden [class*=hide] {
+    color: @oban-success;
+    background: @oban-success-bg;
+  }
+  .oban-mobile();
+
+}
+
+

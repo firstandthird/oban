@@ -669,3 +669,89 @@ body {
   width: 80%;
   display: block;
 }
+.grid .fluid-grid12 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.grid .column-fixed div,
+.grid div[class^=column] .name {
+  padding: 10px 0;
+  background: #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+.grid div[class^=column] div[class^=column] .name {
+  background: #bbb;
+}
+.grid #wrapper {
+  width: 900px;
+  padding: 10px 0;
+  margin: 0 auto;
+  background: #f0f0f0;
+}
+.grid .btns {
+  margin: 0 0 10px 10px;
+}
+.mobile .block {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  text-align: center;
+  margin: 10px 0;
+}
+.mobile .block span {
+  display: block;
+  padding: 10px;
+}
+.mobile .visible [class*=show],
+.mobile .hidden [class*=hide] {
+  color: #3d6c2a;
+  background: #dff0d8;
+}
+.mobile .show-tiny,
+.mobile .show-small,
+.mobile .show-medium,
+.mobile .show-large {
+  display: none !important;
+}
+@media (max-width: 768px) {
+  .mobile .show-tiny {
+    display: block !important;
+  }
+  .mobile .hide-tiny {
+    display: none !important;
+  }
+  .mobile .grid-stacked-tiny [class*=column] {
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 991px) {
+  .mobile .show-small {
+    display: block !important;
+  }
+  .mobile .hide-small {
+    display: none !important;
+  }
+  .mobile .grid-stacked-small [class*=column] {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .mobile .show-medium {
+    display: block !important;
+  }
+  .mobile .hide-medium {
+    display: none !important;
+  }
+  .mobile .grid-stacked-medium [class*=column] {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .mobile .show-large {
+    display: block !important;
+  }
+  .mobile .hide-large {
+    display: none !important;
+  }
+}
