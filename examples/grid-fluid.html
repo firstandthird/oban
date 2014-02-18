@@ -5,34 +5,10 @@
     <title></title>
     <link rel="stylesheet" href="oban.css"/>
     <style>
-      .fluid-grid12 {
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-      .column-fixed div,
-      div[class^=column] .name { 
-        padding: 10px 0;
-        background: #ddd;
-        border-radius: 5px;
-        text-align: center;
-      }
-      div[class^=column] div[class^=column] .name {
-        background: #bbb;
-      }
-      #wrapper {
-        width: 900px;
-        padding: 10px 0;
-        margin: 0 auto;
-        background: #f0f0f0;
-      }
-
-      .btns {
-        margin: 0 0 10px 10px;
-      }
 
     </style>
   </head>
-  <body>
+  <body class="grid">
     <div id="wrapper">
       <div id="btns" class="btns">
         <button class="btn-flat" onclick="fixed()">Fixed Width</button>
