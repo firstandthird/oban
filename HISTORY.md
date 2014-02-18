@@ -1,4 +1,11 @@
 
+0.13.0 / 2014-02-18 
+==================
+
+  * feature(mobile): added oban-mobile mixin
+  * refactor(grid): moved example css into sample.less
+  * refactor(colors): changed bl prefix with oban
+
 0.12.1 / 2014-01-07 
 ==================
 
