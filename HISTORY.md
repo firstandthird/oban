@@ -1,4 +1,9 @@
 
+0.14.0 / 2014-04-18 
+==================
+
+  * feature(base): added oban-base() mixing for opinionated classes
+
 0.13.0 / 2014-02-18 
 ==================
 

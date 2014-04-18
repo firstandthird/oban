@@ -1,7 +1,6 @@
-
 //
 // oban - a set of less mixins that give you a starting point when starting a new project
-// v0.13.0
+// v0.14.0
 // https://github.com/jgallen23/oban
 // copyright JGA 2014
 // MIT License
@@ -80,6 +79,71 @@
     font-size: @fontSize;
     line-height: @height;
     padding: 0 20px;
+  }
+
+}
+
+.oban-base(
+  @bodyColor: #333;
+) {
+
+  .oban-reset();
+  body {
+    color: @bodyColor;
+  }
+  .oban-typography(
+    @bodySize: 16px,
+    @lineHeight: 24px
+  );
+  .oban-mobile();
+
+  .grid12 {
+    .oban-grid-fluid();
+  }
+
+  //Utilities
+  * {
+    .oban-border-box();
+  }
+
+  .clearfix {
+    .oban-clearfix();
+  }
+
+  .pull-left {
+    .oban-pull-left();
+  }
+
+  .pull-right {
+    .oban-pull-right();
+  }
+
+  .hide {
+    .oban-hide();
+  }
+
+  .list-inline {
+    .oban-list-inline();
+  }
+
+  .list-unstyled {
+    .oban-list-unstyled();
+  }
+
+  .spacing-small {
+    .oban-spacing-small();
+  }
+
+  .spacing-medium {
+    .oban-spacing-medium();
+  }
+
+  .spacing-large {
+    .oban-spacing-large();
+  }
+
+  .spacing-xlarge {
+    .oban-spacing-xlarge();
   }
 
 }
