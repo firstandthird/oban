@@ -181,44 +181,26 @@
   margin-right: -220px;
   width: 220px;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  text-rendering: optimizelegibility;
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.375em;
 }
 h1 {
-  font-size: 38.5px;
-  line-height: 50px;
+  font-size: 3em;
+  line-height: 1.05em;
 }
 h2 {
-  font-size: 31.5px;
-  line-height: 40px;
+  font-size: 2.25em;
+  line-height: 1.25em;
 }
 h3 {
-  font-size: 24.5px;
-  line-height: 40px;
+  font-size: 1.75em;
+  line-height: 1.25em;
 }
 h4 {
-  font-size: 17.5px;
-}
-h5 {
-  font-size: 14px;
-}
-h6 {
-  font-size: 11.9px;
-}
-p {
-  margin: 0;
-  line-height: 20px;
-}
-body {
-  font-size: 14px;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  line-height: 20px;
+  font-size: 1.125em;
+  line-height: 1.222em;
 }
 .message-error {
   background: #f2dede;
