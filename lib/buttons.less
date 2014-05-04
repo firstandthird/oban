@@ -2,22 +2,29 @@
 .oban-button-reset() {
   cursor: pointer;
   display: inline-block;
-  text-align: center;
   border: 0;
   background: transparent;
-  font-size: 14px;
-  line-height: 20px;
-  border-radius: 5px;
-  padding: 4px 12px;
+  outline: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
-.oban-button-flat(@bgColor: #333, @textColor: #fff, @hoverBgColor: #336699, @hoverTextColor: #fff) {
-
+.oban-button-normalize() {
   .oban-button-reset();
+  font-size: 14px;
+  line-height: 20px;
+  padding: 4px 12px;
+  text-align: center;
+}
+
+.oban-button-flat(@bgColor: #34AADC, @textColor: contrast(@bgColor), @hoverBgColor: darken(@bgColor, 20), @hoverTextColor: contrast(@hoverBgColor)) {
+
+  .oban-button-normalize();
 
   background-color: @bgColor;
   color: @textColor;
   border: 1px solid @bgColor;
+  border-radius: 5px;
 
   &.hover,
   &:hover {
@@ -36,15 +43,16 @@
 
 }
 
-.oban-button-gradient(@bgColor: #fff, @textColor: #333, @hoverBgColor: #666, @hoverTextColor: #fff) {
+.oban-button-gradient(@bgColor: #fff, @textColor: contrast(@bgColor), @hoverBgColor: darken(@bgColor, 20), @hoverTextColor: contrast(@hoverBgColor)) {
 
-  .oban-button-reset();
+  .oban-button-normalize();
 
   color: @textColor;
 
   .oban-gradient(@bgColor, darken(@bgColor, 20));
   box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   border: 1px solid darken(@bgColor, 20);
+  border-radius: 5px;
 
   &.hover,
   &:hover {

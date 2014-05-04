@@ -72,16 +72,16 @@
   margin-left: 100%;
 }
 .fluid-grid12 .column11 {
-  width: 91.66666666666666%;
+  width: 91.66666667%;
 }
 .fluid-grid12 .offset11 {
-  margin-left: 91.66666666666666%;
+  margin-left: 91.66666667%;
 }
 .fluid-grid12 .column10 {
-  width: 83.33333333333334%;
+  width: 83.33333333%;
 }
 .fluid-grid12 .offset10 {
-  margin-left: 83.33333333333334%;
+  margin-left: 83.33333333%;
 }
 .fluid-grid12 .column9 {
   width: 75%;
@@ -90,16 +90,16 @@
   margin-left: 75%;
 }
 .fluid-grid12 .column8 {
-  width: 66.66666666666666%;
+  width: 66.66666667%;
 }
 .fluid-grid12 .offset8 {
-  margin-left: 66.66666666666666%;
+  margin-left: 66.66666667%;
 }
 .fluid-grid12 .column7 {
-  width: 58.333333333333336%;
+  width: 58.33333333%;
 }
 .fluid-grid12 .offset7 {
-  margin-left: 58.333333333333336%;
+  margin-left: 58.33333333%;
 }
 .fluid-grid12 .column6 {
   width: 50%;
@@ -108,16 +108,16 @@
   margin-left: 50%;
 }
 .fluid-grid12 .column5 {
-  width: 41.66666666666667%;
+  width: 41.66666667%;
 }
 .fluid-grid12 .offset5 {
-  margin-left: 41.66666666666667%;
+  margin-left: 41.66666667%;
 }
 .fluid-grid12 .column4 {
-  width: 33.33333333333333%;
+  width: 33.33333333%;
 }
 .fluid-grid12 .offset4 {
-  margin-left: 33.33333333333333%;
+  margin-left: 33.33333333%;
 }
 .fluid-grid12 .column3 {
   width: 25%;
@@ -126,16 +126,16 @@
   margin-left: 25%;
 }
 .fluid-grid12 .column2 {
-  width: 16.666666666666664%;
+  width: 16.66666667%;
 }
 .fluid-grid12 .offset2 {
-  margin-left: 16.666666666666664%;
+  margin-left: 16.66666667%;
 }
 .fluid-grid12 .column1 {
-  width: 8.333333333333332%;
+  width: 8.33333333%;
 }
 .fluid-grid12 .offset1 {
-  margin-left: 8.333333333333332%;
+  margin-left: 8.33333333%;
 }
 .fluid-grid12.grid-pad {
   padding: 20px;
@@ -343,52 +343,55 @@ body {
 .btn {
   cursor: pointer;
   display: inline-block;
-  text-align: center;
   border: 0;
   background: transparent;
-  font-size: 14px;
-  line-height: 20px;
-  border-radius: 5px;
-  padding: 4px 12px;
+  outline: 0;
+  padding: 0;
+  text-decoration: none;
 }
 .btn-flat {
   cursor: pointer;
   display: inline-block;
-  text-align: center;
   border: 0;
   background: transparent;
+  outline: 0;
+  padding: 0;
+  text-decoration: none;
   font-size: 14px;
   line-height: 20px;
-  border-radius: 5px;
   padding: 4px 12px;
-  background-color: #333333;
+  text-align: center;
+  background-color: #34aadc;
   color: #ffffff;
-  border: 1px solid #333333;
+  border: 1px solid #34aadc;
+  border-radius: 5px;
 }
 .btn-flat.hover,
 .btn-flat:hover {
   color: #ffffff;
-  background-color: #336699;
-  border: 1px solid #336699;
+  background-color: #196d91;
+  border: 1px solid #196d91;
 }
 .btn-flat.active,
 .btn-flat:active {
-  background-color: #336699;
-  border: 1px solid #336699;
+  background-color: #196d91;
+  border: 1px solid #196d91;
   outline: 0;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 .btn-gradient {
   cursor: pointer;
   display: inline-block;
-  text-align: center;
   border: 0;
   background: transparent;
+  outline: 0;
+  padding: 0;
+  text-decoration: none;
   font-size: 14px;
   line-height: 20px;
-  border-radius: 5px;
   padding: 4px 12px;
-  color: #333333;
+  text-align: center;
+  color: #000000;
   background-color: #ebebeb;
   background-image: -moz-linear-gradient(top, #ffffff, #cccccc);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#cccccc));
@@ -399,6 +402,7 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffcccccc', GradientType=0);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   border: 1px solid #cccccc;
+  border-radius: 5px;
 }
 .btn-gradient.hover,
 .btn-gradient:hover {
@@ -432,12 +436,11 @@ body {
 .modal button.close {
   cursor: pointer;
   display: inline-block;
-  text-align: center;
   border: 0;
   background: transparent;
-  font-size: 14px;
-  line-height: 20px;
-  padding: 4px 12px;
+  outline: 0;
+  padding: 0;
+  text-decoration: none;
   float: right;
   border: 1px solid #e5e5e5;
   border-radius: 5px;
