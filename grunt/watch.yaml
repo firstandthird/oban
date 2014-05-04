@@ -19,4 +19,7 @@ grunt:
   files: 
     - 'Gruntfile.js'
     - 'grunt/*'
+    - 'bower.json'
+  options:
+    reload: true
   tasks: 'default'

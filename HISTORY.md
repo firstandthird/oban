@@ -1,4 +1,10 @@
 
+0.15.0 / 2014-05-04 
+==================
+
+  * feat(buttons): use less contrast and darken functions for buttons
+  * updated grunt deps
+
 0.14.0 / 2014-04-18 
 ==================
 
