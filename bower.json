@@ -1,6 +1,6 @@
 {
   "name": "oban",
-  "version": "0.15.0",
+  "version": "0.15.1",
   "main": "oban.less",
   "description": "a set of less mixins that give you a starting point when starting a new project",
   "homepage": "https://github.com/firstandthird/oban",
