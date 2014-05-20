@@ -1,12 +1,12 @@
 @oban-screen-tiny-max: 768px;
-@oban-screen-small-min: 769px;
+@oban-screen-small-min: (@oban-screen-tiny-max+1);
 @oban-screen-small-max: 991px;
-@oban-screen-medium-min: 992px;
+@oban-screen-medium-min: (@oban-screen-small-max+1);
 @oban-screen-medium-max: 1199px;
-@oban-screen-large-min: 1200px;
+@oban-screen-large-min: (@oban-screen-medium-max+1);
 
 
-.oban-mobile() {
+.oban-responsive() {
 
   .show-tiny,
   .show-small,
