@@ -1,0 +1,5 @@
+.oban-google-font(@font-family, @rest...) {
+  @google-font: replace(@font-family, " ", "+");
+  @font-weights: ~`(function() { return @{rest}.join(','); })()`;
+  @import "http://fonts.googleapis.com/css?family=@{google-font}:@{font-weights}";
+}
