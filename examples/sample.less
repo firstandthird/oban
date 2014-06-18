@@ -74,6 +74,26 @@
   .oban-arrow-bottom(#ccc);
 }
 
+.arrow-border-top {
+  border: 1px solid #000;
+  .oban-arrow-top(@color: #ccc, @border: #000, @border-width: 1px);
+}
+
+.arrow-border-right {
+  border: 1px solid #000;
+  .oban-arrow-right(#ccc, @border: #000, @border-width: 1px);
+}
+
+.arrow-border-left {
+  border: 1px solid #000;
+  .oban-arrow-left(#ccc, @border: #000, @border-width: 1px);
+}
+
+.arrow-border-bottom {
+  border: 1px solid #000;
+  .oban-arrow-bottom(#ccc, @border: #000, @border-width: 1px);
+}
+
 
 .size-test1 {
   .oban-size(50px, 50px);
