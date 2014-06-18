@@ -8,93 +8,63 @@
 .oban-arrow-base() {
   position: relative;
 
-  &:after, &:before {
+  &:after {
     content: "";
     height: 0;
     width: 0;
     position: absolute;
-    position: absolute;
-    pointer-events: none;
-    bottom: 100%;
-    border: solid transparent;
   }
 }
 
-.oban-arrow-top(@color, @size: 10px, @border: transparent, @border-width: 0px, @location: 50%) {
+.oban-arrow-top(@color, @size: 10px, @location: 50%) {
   .oban-arrow-base();
 
   &:after {
     left: @location;
-    border-bottom-color: @color;
-    border-width: @size;
     margin-left: -@size;
-  }
-
-  &:before {
-    left: @location;
-    border-bottom-color: @border;
-    border-width: @size + @border-width;
-    margin-left: -@size - @border-width;
+    top: -@size;
+    border-left: @size solid transparent;
+    border-right: @size solid transparent;
+    border-bottom: @size solid @color;
   }
 }
 
-.oban-arrow-right(@color, @size: 10px, @border: transparent, @border-width: 0px, @location: 50%) {
+.oban-arrow-right(@color, @size: 10px, @location: 50%) {
   .oban-arrow-base();
 
   &:after {
-    left: 100%;
     top: @location;
-    border-left-color: @color;
-    border-width: @size;
     margin-top: -@size;
-  }
-
-  &:before {
-    left: 100%;
-    top: @location;
-    border-left-color: @border;
-    border-width: @size + @border-width;
-    margin-top: -@size - @border-width;
+    right: -@size;
+    border-top: @size solid transparent;
+    border-bottom: @size solid transparent;
+    border-left: @size solid @color;
   }
 }
 
-.oban-arrow-left(@color, @size: 10px, @border: transparent, @border-width: 0px, @location: 50%) {
+.oban-arrow-left(@color, @size: 10px, @location: 50%) {
   .oban-arrow-base();
 
   &:after {
-    right: 100%;
     top: @location;
-    border-right-color: @color;
-    border-width: @size;
     margin-top: -@size;
-  }
-
-  &:before {
-    right: 100%;
-    top: @location;
-    border-right-color: @border;
-    border-width: @size + @border-width;
-    margin-top: -@size - @border-width;
+    left: -@size;
+    border-top: @size solid transparent;
+    border-bottom: @size solid transparent;
+    border-right: @size solid @color;
   }
 }
 
-.oban-arrow-bottom(@color, @size: 10px, @border: transparent, @border-width: 0px, @location: 50%) {
+.oban-arrow-bottom(@color, @size: 10px, @location: 50%) {
   .oban-arrow-base();
 
   &:after {
-    top: 100%;
     left: @location;
-    border-top-color: @color;
-    border-width: @size;
     margin-left: -@size;
-  }
-
-  &:before {
-    top: 100%;
-    left: @location;
-    border-top-color: @border;
-    border-width: @size + @border-width;
-    margin-left: -@size - @border-width;
+    bottom: -@size;
+    border-left: @size solid transparent;
+    border-right: @size solid transparent;
+    border-top: @size solid @color;
   }
 }
 
