@@ -918,3 +918,47 @@ body {
     display: none !important;
   }
 }
+.responsive {
+  margin: 0;
+  padding: 0;
+}
+.responsive div {
+  width: 100%;
+  height: 500px;
+}
+.responsive div:after {
+  color: #fff;
+  font-size: 30px;
+}
+@media only screen and (min-width: 1200px) {
+  .responsive div {
+    background: green;
+  }
+  .responsive div:after {
+    content: 'Large';
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .responsive div {
+    background: orange;
+  }
+  .responsive div:after {
+    content: 'Medium';
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .responsive div {
+    background: yellow;
+  }
+  .responsive div:after {
+    content: 'Small';
+  }
+}
+@media only screen and (max-width: 768px) {
+  .responsive div {
+    background: red;
+  }
+  .responsive div:after {
+    content: 'Tiny';
+  }
+}

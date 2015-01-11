@@ -184,3 +184,52 @@
 }
 
 
+.responsive {
+  margin: 0;
+  padding: 0;
+  div {
+    width: 100%;
+    height: 500px;
+    &:after {
+      color: #fff;
+      font-size: 30px;
+    }
+  }
+
+  .oban-respond-to(large, {
+    div {
+      background: green;
+      &:after {
+        content: 'Large';
+      }
+    }
+  });
+
+  .oban-respond-to(medium, {
+    div {
+      background: orange;
+      &:after {
+        content: 'Medium';
+      }
+    }
+  });
+
+  .oban-respond-to(small, {
+    div {
+      background: yellow;
+      &:after {
+        content: 'Small';
+      }
+    }
+  });
+
+  .oban-respond-to(tiny, {
+    div {
+      background: red;
+      &:after {
+        content: 'Tiny';
+      }
+    }
+  });
+
+}
