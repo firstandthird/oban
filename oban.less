@@ -2,7 +2,7 @@
 // oban - a set of less mixins that give you a starting point when starting a new project
 // v0.18.0
 // https://github.com/firstandthird/oban
-// copyright First+Third 2014
+// copyright First+Third 2015
 // MIT License
 //
 .oban-arrow-base() {
@@ -1221,6 +1221,21 @@ table {
 
   }
 
+}
+
+.oban-respond-to(@type, @rules) {
+  & when(@type = large) {
+    @media only screen and (min-width: @oban-screen-large-min) { @rules(); }
+  }
+  & when(@type = medium) {
+    @media only screen and (min-width: @oban-screen-medium-min) and (max-width: @oban-screen-medium-max) { @rules(); }
+  }
+  & when(@type = small) {
+    @media only screen and (min-width: @oban-screen-small-min) and (max-width: @oban-screen-small-max) { @rules(); }
+  }
+  & when(@type = tiny) {
+    @media only screen and (max-width: @oban-screen-tiny-max) { @rules(); }
+  }
 }
 
 @oban-spacing-small: 10px;
