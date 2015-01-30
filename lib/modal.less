@@ -3,7 +3,7 @@
   .oban-border-box();
   position: fixed;
   padding: 20px;
-  top: 100px;
+  top: 0;
   left: 50%;
   z-index: 999;
   overflow: auto;
@@ -17,6 +17,8 @@
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   background-clip: padding-box;
 
+  .oban-transition(top);
+
   button.close {
     .oban-button-reset();
     .oban-pull-right();
@@ -27,6 +29,13 @@
     }
   }
 
+  @media (min-height: 840px) {
+    top: 100px;
+  }
+
+  @media (min-height: 585px) and (max-height: 840px) {
+    top: 60px;
+  }
 }
 
 .oban-modal-backdrop() {
