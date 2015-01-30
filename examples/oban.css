@@ -429,7 +429,7 @@ body {
   box-sizing: border-box;
   position: fixed;
   padding: 20px;
-  top: 100px;
+  top: 0;
   left: 50%;
   z-index: 999;
   overflow: auto;
@@ -441,6 +441,8 @@ body {
   border-radius: 6px;
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   background-clip: padding-box;
+  -webkit-transition: top 0.2s ease-out;
+  transition: top 0.2s ease-out;
 }
 .modal button.close {
   cursor: pointer;
@@ -459,6 +461,16 @@ body {
 }
 .modal button.close:hover {
   border: 1px solid #b2b2b2;
+}
+@media (min-height: 840px) {
+  .modal {
+    top: 100px;
+  }
+}
+@media (min-height: 585px) and (max-height: 840px) {
+  .modal {
+    top: 60px;
+  }
 }
 .modal-backdrop {
   position: fixed;
