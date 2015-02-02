@@ -1,6 +1,6 @@
 //
 // oban - a set of less mixins that give you a starting point when starting a new project
-// v0.20.0
+// v0.21.0
 // https://github.com/firstandthird/oban
 // copyright First+Third 2015
 // MIT License
@@ -580,6 +580,12 @@
 .oban-vcenter(@height) {
   height: @height;
   line-height: @height;
+}
+
+.oban-image-fit() {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
 }
 
 .oban-list-unstyled() {
