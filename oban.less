@@ -1,6 +1,6 @@
 //
 // oban - a set of less mixins that give you a starting point when starting a new project
-// v0.21.0
+// v0.21.1
 // https://github.com/firstandthird/oban
 // copyright First+Third 2015
 // MIT License
@@ -438,7 +438,7 @@
 .oban-google-font(@font-family, @rest...) {
   @google-font: replace(@font-family, " ", "+");
   @font-weights: ~`(function() { return @{rest}.join(','); })()`;
-  @import "http://fonts.googleapis.com/css?family=@{google-font}:@{font-weights}";
+  @import "//fonts.googleapis.com/css?family=@{google-font}:@{font-weights}";
 }
 
 .oban-gradient(@startColor: #555, @endColor: #333) {

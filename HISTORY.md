@@ -1,4 +1,11 @@
 
+0.21.1 / 2015-02-24
+==================
+
+  * added example for google-font
+  * google fonts supported over ssl
+
+
 0.21.0 / 2015-02-02
 ==================
 
